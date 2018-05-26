@@ -8,8 +8,8 @@ Agregen sus resumen bajo este formato:
 información
 
 
-*Lázaro Camasca Edson Nick*
-##BUSQUEDA ENTRE ADVERSARIOS
+* Lázaro Camasca Edson Nick *
+## BUSQUEDA ENTRE ADVERSARIOS
 
 El problema de búsqueda entre adversarios, también conocido como juego. El jugar a juegos fue una de las primeras tareas emprendidas en IA. Desde 1950 hasta la actualidad hubo un progreso continuo en el nivel de juego, hasta el punto de que las maquinas han derrotado a campeones humanos en ajedrez. Los juegos son interesantes porque son demasiado difíciles de resolver. Por ejemplo, el ajedrez tiene un árbol de búsqueda de aproximadamente 10^154 nodos por lo tanto se requiere la capacidad de tomar decisiones óptimas.
 Los juegos en inteligencia artificial, son aquel entorno en donde agentes tendrán que considerar las acciones de otros agentes, los agentes se encuentran en conflicto y ambos jugadores tratan de maximizar su rendimiento.
