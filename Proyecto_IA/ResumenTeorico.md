@@ -1,15 +1,10 @@
-﻿# Resumen Teórico
+# Resumen Teórico
 ----
 
-Agregen sus resumen bajo este formato:
 
-## Tema
+## __INTELIGENCIA ARTIFICIAL__
+Realizado por: Ponce Pinedo Víctor Alberto
 
-información
-
-* Ponce Pinedo Víctor Alberto
-
-## INTELIGENCIA ARTIFICIAL
 La inteligencia artificial es un área de estudio bastante nueva. El propio término de **INTELIGENCIA ARTIFICIAL** fue implantado en una conferencia en el año de 1956. Esta área aborda la simulación de procesos de inteligencia humana por parte de máquinas, especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) entre otras.
 
 ## DEFINICIONES DE IA
@@ -68,9 +63,10 @@ Este algoritmo es un metodo de solución para hallar el camino de menor coste en
 + *g*(*n*): coste del camino desde el nodo inicio al nodo *n*.
 + *h*(*n*): función heurística que determina el coste estimado del camino más barato desde n al objetivo.
 Lo que hará un algoritmo en un nodo *x* determinado será analizar mediante la función *f* los nodos adyacentes a *x* y el nodo *y* escogido será el que nos devuelve el menor coste, es decir, el menor *f*(*y*) de todos.
+----
 
-* Lázaro Camasca Edson Nick 
-## BÚSQUEDA ENTRE ADVERSARIOS
+## __BÚSQUEDA ENTRE ADVERSARIOS__
+Realizado por: Lázaro Camasca Edson Nick 
 
 El problema de búsqueda entre adversarios, también conocido como juego. El jugar a juegos fue una de las primeras tareas emprendidas en IA. Desde 1950 hasta la actualidad hubo un progreso continuo en el nivel de juego, hasta el punto de que las máquinas han derrotado a campeones humanos en ajedrez. Los juegos son interesantes porque son demasiado difíciles de resolver. Por ejemplo, el ajedrez tiene un árbol de búsqueda de aproximadamente $$10^{154}$$ nodos por lo tanto se requiere la capacidad de tomar decisiones óptimas.  
 Los juegos en inteligencia artificial, son aquel entorno en donde agentes tendrán que considerar las acciones de otros agentes, los agentes se encuentran en conflicto y ambos jugadores tratan de maximizar su rendimiento.
@@ -86,9 +82,10 @@ Clasificacion de juegos segun la IA:
 En juegos de suma cero de dos jugadores con información perfecta, **el algoritmo minimax** puede seleccionar movimientos óptimos usando una enumeración primero en profundidad del árbol de juegos.  
 El algoritmo de búsqueda **alfa-beta** calcula el mismo movimiento óptimo que el minimax, pero consigue una eficiencia mucho mayor, eliminando subárboles que son probablemente irrelevantes.
 
-* Patrichs Inocente 
+---- 
 
-## Machine Learning
+## __Machine Learning__
+Realizado por: Patrichs Inocente
 
 Es un tipo de inteligencia artificial (AI) que proporciona a las computadoras la capacidad de aprendizaje automatico, sin ser programadas explícitamente. El aprendizaje automático se centra en el desarrollo de programas informáticos que pueden cambiar cuando se exponen a nuevos datos.
 
@@ -134,9 +131,10 @@ básicas de la visión.
 similitud  con  los  sistemas  biológicos.  Su  arquitectura  está  fuertemente  ligada  a  las  
 necesidades de las aplicaciones para la que es diseñada. 
 
+----
 
-## Proceso de Markov
-
+## __Proceso de Markov__
+Realizado por: Marco Leon Rios
 
 Un proceso de Markov es un tipo especial de proceso estocástico que describe la evolución de un sistema de variables aleatorias con la particularidad de que la valor de la probabilidad de un estado depende solamente del valor de la probabilidad del estado anterior.
 
