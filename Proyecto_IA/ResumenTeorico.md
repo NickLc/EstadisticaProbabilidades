@@ -4,7 +4,7 @@
 
 ## __INTELIGENCIA ARTIFICIAL__
 Realizado por: Ponce Pinedo Víctor Alberto
-
+----
 La inteligencia artificial es un área de estudio bastante nueva. El propio término de **INTELIGENCIA ARTIFICIAL** fue implantado en una conferencia en el año de 1956. Esta área aborda la simulación de procesos de inteligencia humana por parte de máquinas, especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) entre otras.
 
 ## DEFINICIONES DE IA
@@ -67,7 +67,7 @@ Lo que hará un algoritmo en un nodo *x* determinado será analizar mediante la 
 
 ## __BÚSQUEDA ENTRE ADVERSARIOS__
 Realizado por: Lázaro Camasca Edson Nick 
-
+----
 El problema de búsqueda entre adversarios, también conocido como juego. El jugar a juegos fue una de las primeras tareas emprendidas en IA. Desde 1950 hasta la actualidad hubo un progreso continuo en el nivel de juego, hasta el punto de que las máquinas han derrotado a campeones humanos en ajedrez. Los juegos son interesantes porque son demasiado difíciles de resolver. Por ejemplo, el ajedrez tiene un árbol de búsqueda de aproximadamente $$10^{154}$$ nodos por lo tanto se requiere la capacidad de tomar decisiones óptimas.  
 Los juegos en inteligencia artificial, son aquel entorno en donde agentes tendrán que considerar las acciones de otros agentes, los agentes se encuentran en conflicto y ambos jugadores tratan de maximizar su rendimiento.
 Un juego puede definirse por el estado inicial (como se establece en el tablero), las acciones legales en cada estado, un test terminal (que dice cuándo el juego está terminado), y una función de utilidad que se aplica a los estados terminales.
@@ -86,7 +86,7 @@ El algoritmo de búsqueda **alfa-beta** calcula el mismo movimiento óptimo que 
 
 ## __Machine Learning__
 Realizado por: Patrichs Inocente
-
+----
 Es un tipo de inteligencia artificial (AI) que proporciona a las computadoras la capacidad de aprendizaje automatico, sin ser programadas explícitamente. El aprendizaje automático se centra en el desarrollo de programas informáticos que pueden cambiar cuando se exponen a nuevos datos.
 
 ### Perceptron
@@ -135,7 +135,7 @@ necesidades de las aplicaciones para la que es diseñada.
 
 ## __Proceso de Markov__
 Realizado por: Marco Leon Rios
-
+----
 Un proceso de Markov es un tipo especial de proceso estocástico que describe la evolución de un sistema de variables aleatorias con la particularidad de que la valor de la probabilidad de un estado depende solamente del valor de la probabilidad del estado anterior.
 
 Mas formalmente, para el caso discreto:
