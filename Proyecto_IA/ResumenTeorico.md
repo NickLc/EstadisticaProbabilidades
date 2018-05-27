@@ -1,4 +1,4 @@
-# Resumen Teórico
+﻿# Resumen Teórico
 ----
 
 Agregen sus resumen bajo este formato:
@@ -7,6 +7,66 @@ Agregen sus resumen bajo este formato:
 
 información
 
+*Ponce Pinedo Víctor Alberto
+
+## INTELIGENCIA ARTIFICIAL
+La inteligencia artificial es un área de estudio bastante nueva. El propio término de **INTELIGENCIA ARTIFICIAL** recién fue implantado en una conferencia en el año de 1956. Esta área aborda la simulación de procesos de inteligencia humana por parte de máquinas, especialmente sistemas informáticos. Estos procesos incluyen el aprendizaje (la adquisición de información y reglas para el uso de la información), el razonamiento (usando las reglas para llegar a conclusiones aproximadas o definitivas) entre otras.
+
+##DEFINICIONES DE IA
+
+Durante el transcurso del tiempo han habido muchos científicos que han tratado de proporcionar una definición formal de IA. Muchas de estas definiciones las podemos agrupar mediante 4 enfoques distintos:
+
+1)  Sistemas que piensan como humanos:
+•El esfuerzo de hacer que los computadores piensen... máquinas con mentes, en el más amplio sentido literal (Haugeland, 1985).
+•La automatización de actividades que vinculamos con procesos de pensamiento humano, actividades como la toma de decisiones, resolución de problemas, aprendizaje (Bellman, 1978).
+    
+2)Sistemas que actúan como humanos:
+           
+•El arte de desarrollar máquinas con capacidad para realizar funciones que cuando son realizadas por personas requieren de inteligencia (Kurzweil, 1990).
+•El estudio de cómo lograr que los computadores realicen tareas que, por el momento, los humanos hacen mejor (Rich y Knight, 1991).
+3) Sistemas que piensan racionalmente:
+• El estudio de las facultades mentales mediante el uso de modelos computacionales (Charniak y McDermott, 1985).
+• El estudio de los cálculos que hacen posible percibir, razonar y actuar (Winston, 1992).
+4)Sistemas que actúan racionalmente:   
+•La Inteligencia Computacional es el estudio del diseño de agentes inteligentes (Poole etal., 1998).
+•La IA está relacionada con conductas inteligentes en artefactos (Nilsson, 1998).
+
+##LA PRUEBA DE TURING
+
+Para poder comprobar si efectivamente un sistema informático es realmente inteligente Alan Turing sugirió una prueba basada en la incapacidad de diferenciar entre entidades inteligentes indiscutibles y seres humanos. Un evaluador humano empieza a formular preguntas a un ser humano y a un sistema informático y estos dos brindarán sus respectivas respuestas. Si el evaluador humano concluye que no puede diferenciar cual de las respuestas provienen del sistema informático entonces se podrá decir que el sistema informático evaluado es inteligente.
+
+##BASES DE LA INTELIGENCIA ARTIFICIAL
+    • Filosofía: las leyes que gobiernan el pensamiento de un ser humano, la relación entre el conocimiento y el mundo físico.
+    • Economía: la teoría de la toma de decisiones, la teoría de juegos, investigación operativa.
+    • Matemáticas:  la lógica, estadística y probabilidadesm, la computabilidad.
+    • Neurociencia: el procesamiento de la información por parte del cerebro humano.
+    • Psicología: el actuar y pensar de las personas, psicología cognitiva.
+    • Computación: diseño de mecanimos que soporten una IA (el hardware).
+    • Linguística: representación del conocimiento, gramática de la lengua,lingüística computacional.
+##ÁREAS DE APLICACIÓN DE LA INTELIGENCIA ARTIFICIAL
+
+    • Tratamiento de Lenguajes Naturales: capacidad de traducción, órdenes a un sistema operativo, conversación hombre-máquina, etc.
+    • Sistemas Expertos: sistemas que se les implementa experiencia para conseguir deducciones cercanas a la realidad.
+    • Robótica: navegación de robots móviles, control de brazos móviles, ensamblaje de piezas, etc.
+    • Problemas de Percepción: visión y habla, reconocimiento de voz, obtención de fallos por medio de la visión, diagnósticos médicos, etc.
+    • Aprendizaje: modelización de conductas para su implante en computadoras.
+
+##BÚSQUEDA HEURÍSTICA
+
+
+Primero definamos lo que es una heurística. Una heurística es un algoritmo diseñado para encontrar la solución más óptima posible de un problema dado, sin embargo puede que si bien una solución se arroja de manera rápida, no se puede demostrar que siempre será así, o bien si la heurística nos devuelve la solución correcta no es posible demostrar que ante otros parámetros siempre devuelva la solución correcta. Las heurísticas están orientadas a reducir la cantidad de búsqueda requerida para encontrar una solución.
+
+Ahora, debido a que muchos problemas y las etapas a seguir para resolverlos se pueden modelar mediante grafos, una búsqueda heurística nos ayudará a encontrar el camino más corto entre un nodo dado y el nodo objetivo que vendría a representar para nosotros la solución del problema. Para ello se definen funciones heurísitcas que representan que tan óptimo es ir hacia un nodo dado y en base a dicha función es que se van tomando las decisiones de que camino recorrer para poder llegar al objetivo.
+
+
+##ALGORITMO A*
+
+Este algoritmo es un metodo de solución para hallar el camino de menor coste en un grafo desde un nodo en específo hasta otro. Para lograr este resultado el algoritmo se vale de una función de evaluación de optimalidad *f*(n) y de funciones *g*(n) y *h*(n) donde:
+
+    • *f*(*n*):  coste más barato estimado de la solución a través de *n*.
+    • *g*(*n*): coste del camino desde el nodo inicio al nodo *n*.
+    • *h*(*n*): función heurística que determina el coste estimado del camino más barato desde n al objetivo.
+Lo que hará un algoritmo en un nodo *x* determinado será analizar mediante la función *f* los nodos adyacentes a *x* y el nodo *y* escogido será el que nos devuelve el menor coste, es decir, el menor *f*(*y*) de todos.
 
 * Lázaro Camasca Edson Nick 
 ## BUSQUEDA ENTRE ADVERSARIOS
