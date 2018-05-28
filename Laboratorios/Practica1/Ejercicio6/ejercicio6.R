@@ -1,6 +1,7 @@
-# Nombre: Marco Naro León Rios 20160775E
 # Pregunta 6:
 #veamos si podemos acceder a datasets
+# Autor: Grupo 4
+
 help("datasets")
 library(help = "datasets")
 quakes
