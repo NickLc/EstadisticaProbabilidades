@@ -1,6 +1,5 @@
-# Nombre: Marco Naro León Rios 20160775E
 # Pregunta 3:
-# 
+# Autor: Grupo 4
 
 # creamos nuestros vectores de datos
 votantes.sexo <- c("F", rep("M", 3), "F", "F", rep("M", 4), "F", "M", rep("F", 4), rep("M", 4))
@@ -64,4 +63,6 @@ fvotantes.confianza <- factor(votantes.confianza, ordered=TRUE, levels=niveles.c
 summary(fvotantes.confianza[fvotantes.partido=="Laborista"])
 summary(fvotantes.confianza[fvotantes.partido=="Nacional"])
 # las personas necesitan mayor convicción...
+
 #fin del script
+

@@ -1,6 +1,5 @@
-# Nombre: Marco Naro León Rios 20160775E
 # Pregunta 2:
-# 
+# Autor: Grupo 4
 
 MA <- matrix(data= c(4.3,3.1,8.2,8.2,3.2,0.9,1.6,6.5), nr=4, nc=2, byrow=TRUE)
 MA
@@ -34,4 +33,5 @@ A
 # comprobamos lo requerido
 solve(A) %*% A - diag(4)
 
-# fin
+# fin del script
+
