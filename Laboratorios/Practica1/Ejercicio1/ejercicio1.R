@@ -2,7 +2,7 @@
 
 # Respuesta 1: El codigo muestra el uso de vectores.
 
-# Respuesta 1.a: El codigo muestra el uso de "seq" en la creación de un vector,
+# Respuesta 1.a: El codigo muestra el uso de "seq" en la creaci?n de un vector,
 #                una secuencia de(from) a(to) agregando(by).
   vector_a <- seq(from = 5, to = -11, by = -0.3)  
   vector_a
@@ -24,9 +24,10 @@
   d1 <- 6:12
   d2 <- rep(5.3, times = 3)
   d4 <- -3
-  d3 <- seq(from = 102, to = length(a), by = (length(a)-102)/8)
+  d3 <- seq(from = 102, to = length(vector_a), by = (length(vector_a)-102)/8)
   # Creacion vector_d 
   vector_d <- c(d1, d2, d4, d3)
   # Longitud del vector = 20
   length(vector_d)
   
+#fin del script  
