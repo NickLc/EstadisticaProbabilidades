@@ -1,33 +1,32 @@
-# Nombre: Marco Naro León Rios 20160775E
-# Pregunta 1:
-# El código almacena una secuencia de valores
-# del 5 al -11 disminuyendo -0.3 a cada paso
-# no llega a incluir al -11
+#Autor: Grupo 4
 
-A <- seq(5, -11, -0.3)
-A
-# ahora invertiremos el orden de nuestra
-# secuencia
-A = rev(A)
-A
+# Respuesta 1: El codigo muestra el uso de vectores.
 
-# definimos el vector pedido
-# usaremos un bucle para facilitarnos
-# el trabajo de repetición
-v = c(-1, 3, -5, 7, -9)
-a <- NULL
-for(i in 1:5) {
-  a = c(a,rep(v[i],10))
-}
-a = c(a,a)
-# imprimimos el resultado ordenado de mayor
-# a menor
-rev(sort(a))
+# Respuesta 1.a: El codigo muestra el uso de "seq" en la creaci�n de un vector,
+#                una secuencia de(from) a(to) agregando(by).
+  vector_a <- seq(from = 5, to = -11, by = -0.3)  
+  vector_a
 
-d1 <- 6:12
-d2 <- rep(5.3, 3)
-d4 <- -3
-d3 <- seq(102, length(a), by=(length(a)-102)/8)
-d5 <- c(d1, d2, d4, d3)
-length(d5)
-# fin del script
+# Respuesta 1.b: El codigo muestra el uso de "rev" para invertir la secuencia(vector).
+  vector_a = rev(vector_a)
+  vector_a
+
+# Respuesta 1.c: El codigo muestra el uso de "rep" para repetir una secuencia. 
+  vector_c <- c(-1, 3, -5, 7, -9)
+  # El numero de repeticiones el definido por "times"
+  vector_c <- rep(vector_c ,times = 2)
+  print(vector_c)
+
+ # Utilizamos "sort" para ordenar la secuencia, habilitamos la opcion decreciente
+  print(sort(vector_c, decreasing = TRUE))
+
+#Respuesta 1.d: El codigo muestra el uso de "length" para medir la longitud del vector
+  d1 <- 6:12
+  d2 <- rep(5.3, times = 3)
+  d4 <- -3
+  d3 <- seq(from = 102, to = length(a), by = (length(a)-102)/8)
+  # Creacion vector_d 
+  vector_d <- c(d1, d2, d4, d3)
+  # Longitud del vector = 20
+  length(vector_d)
+  
