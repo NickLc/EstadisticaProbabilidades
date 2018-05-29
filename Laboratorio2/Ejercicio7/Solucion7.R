@@ -1,6 +1,6 @@
-# Nombre: Patrichs Inocente Valle 20132212J
 # Respuesta7 : Se muestra el calculo de probabilidades,y el ingreso de datos 
 # mediante la funcion read.table().
+# Autor: Grupo 4
 
  mcd<-function(a,b) {
    if(b)
@@ -11,7 +11,10 @@
 # Solucion item a)
  
 # Leemos las dos cadenas de entrada,que estan alojadas en el archivo "datos1.txt":
-x<-read.table("/home/patrichs/Documentos/CursoR/Practica2/Ejercicio7/datos1.txt")
+# Asumiremos que estamos trabajando en alguna distribución de Linux
+system("find -name \"datos1.txt\" > ruta")
+rutz <- scan(file = "ruta", what = character())
+x<-read.table(rutz)
 # Extraemos las dos cadenas y las asignamos como vectores de caracteres en Info y A:
 Info<-noquote(strsplit(as.character(x[1,]),NULL)[[1]])
 A <- noquote(strsplit(as.character(x[2,]),NULL)[[1]])
@@ -38,7 +41,9 @@ sprintf("%.9f",probabilidad)
 # Solucion item b)
 
 # Leemos los valores que sacaron Vilma y Esther, que se encuentran en el archivo datos2.txt:
-y<-read.table("/home/patrichs/Documentos/CursoR/Practica2/Ejercicio7/datos2.txt")
+system("find -name \"datos2.txt\" > ruta2")
+rutx <- scan(file = "ruta2", what = character())
+y<-read.table(rutx)
 # Extraemos el numero maximo de los dos resultados:
 maximo=max(y)
 # Contaremos los casos desfavorables en los que Jessica no gana:
@@ -54,3 +59,10 @@ for(i in 1:6){
 favorables = 216-casos
 #Mostramos la probabilidad de que Jessica gane,expresandolo en una fraccion irreductible:
 sprintf("%i/%i",favorables/mcd(favorables,216),216/mcd(favorables,216))
+
+# Eliminamos rastro de que estuvimos aquí...
+system("rm ruta")
+system("rm ruta2")
+
+#fin del script
+
