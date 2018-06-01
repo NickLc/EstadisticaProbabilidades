@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Pregunta 2:
+>>>>>>> 1240f1eb2737ea224210f5bf8f0856a45f179aa9
 # Autor: Grupo 4
 # Respuesta 2: El codigo muestra el uso de Matrices
 
@@ -49,4 +53,7 @@
   #diag(4) es la matriz identidad de 4x4
 
   
+<<<<<<< HEAD
 # fin del script
+=======
+>>>>>>> 1240f1eb2737ea224210f5bf8f0856a45f179aa9

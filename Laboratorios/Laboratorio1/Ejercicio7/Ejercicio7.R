@@ -61,4 +61,4 @@ which(x=is.na(x=f2))
 # de dos valores NULL, presentes  : Falso
 is.null(x=f2)
 
-
+#fin script
