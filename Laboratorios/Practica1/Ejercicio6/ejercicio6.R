@@ -1,6 +1,6 @@
+# Autor: Grupo 4
 # Pregunta 6:
 #veamos si podemos acceder a datasets
-# Autor: Grupo 4
 
 help("datasets")
 library(help = "datasets")
