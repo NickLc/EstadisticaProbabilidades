@@ -1,6 +1,6 @@
-# Pregunta 3:
 # Autor: Grupo 4
 
+# Pregunta 3:
 # creamos nuestros vectores de datos
 votantes.sexo <- c("F", rep("M", 3), "F", "F", rep("M", 4), "F", "M", rep("F", 4), rep("M", 4))
 votantes.partido <- c("Laborista", "Nacional", "Nacional", "Laborista", "Nacional", "Verdes", "Nacional",
@@ -10,6 +10,7 @@ votantes.partido <- c("Laborista", "Nacional", "Nacional", "Laborista", "Naciona
 # usar ordered pues estamos trabajando con 
 # variables categóricas nominales. Esto es, 
 # ninguna es "mayor" que la otra.
+
 fvotantes.sexo <- factor(votantes.sexo, levels = c("M", "F"))
 fvotantes.partido <- factor(votantes.partido, levels = c("Nacional", "Laborista",
                                                         "Verdes", "Maori", "Otro"))
@@ -44,7 +45,9 @@ levels(fvotantes.sexo) <- c("Masculino", "Femenino")
 fvotantes.sexo; fvotantes.partido
 
 #niveles de confianza
-porcentajes.confianza <- c(93, 55, 29, 100, 52, 84, 56, 0, 33, 52, 35, 53, 55, 46, 40, 56, 45, 64, 31, 10, 29, 40, 95, 18, 61, 0)
+porcentajes.confianza <- c(93, 55, 29, 100, 52, 84, 56, 0, 33, 52, 35,
+                           53, 55, 46, 40, 56, 45, 64, 31, 10, 29, 40, 
+                           95, 18, 61, 0)
 votantes.confianza <- NULL
 for(i in porcentajes.confianza) {
   if(i <= 30) {
