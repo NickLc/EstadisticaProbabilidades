@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-# Pregunta 2:
-# Autor: Grupo 4
-=======
 # Autor: Grupo 4
 # Respuesta 2: El codigo muestra el uso de Matrices
->>>>>>> 89a61fc2751dded50e9793a92b30ce263bdf4080
 
 # Respuesta 2.a: Se muestra el uso de "matrix" para la creacion de matrices 
   matrix_a <- matrix(data= c(4.3,3.1,8.2,8.2,3.2,0.9,1.6,6.5), nr=4, nc=2, byrow=TRUE)
@@ -13,10 +8,6 @@
   # Utilizamos "dim" para hallar la dimension de la matriz
   dim(matrix_a)
 
-<<<<<<< HEAD
-# fin del script
-
-=======
 # Respuesta 2.b: Se muestra la eliminacion de una fila
   # Utilizamos el signo '-' y indicamos la fila que se quiere eliminar
   dim(matrix_a[-4,])
@@ -58,4 +49,4 @@
   #diag(4) es la matriz identidad de 4x4
 
   
->>>>>>> 89a61fc2751dded50e9793a92b30ce263bdf4080
+# fin del script

@@ -38,3 +38,4 @@ misdatos
  misdatosframe <- cbind(misdatos2,dframe)
  misdatosframe
  
+ # fin del script
