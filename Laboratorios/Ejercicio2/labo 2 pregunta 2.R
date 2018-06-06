@@ -1,20 +1,30 @@
 
-help(array) ## con esto veremos la documentación de la función
-array(8:1,dim=c(2,2,2)) ## en esta función solamente se emplea la asignación posicional, ya que los argumentos ocupan el lugar que dicta la documentación
+# Autor: Grupo 4
 
+# Respuesta 2:
+# Utilizamos la funcion "args" para ver que argumentos tiene una funcion, y asi 
+# interpretar que que tipo de estilo de coincidencia de argumentos emplea
+# para mayor informacion de los argumentos usar "help"
 
-help(rep)  ## con esto veremos la documentación de la función
-rep(1:2,3)   ## en esta función solamente se emplea la asignación posicional, ya que los argumentos ocupan el lugar que dicta la documentación
+args(array)
+array(8:1,dim=c(2,2,2)) #Exacta
 
-help(seq)  ## con esto veremos la documentación de la función
-seq(from=10,to=8,length=5) ## se emplea coincidencia exacta por nombre del argumento y asgnación por posición ya que los argumentos son nombrados exactamente como dicta la documentación y se ubican en la ubicación que dicta la misma
+help(rep)  
+rep(1:2,3)   #Posicional 
 
+help(seq) 
+seq(from=10,to=8,length=5) #Parcial, el argumento length es lenght.out
  
-help(sort)  ## con esto veremos la documentación de la función
-sort(decreasing=T,x=c(2,1,1,2,0.3,3,1.3)) ## se emplea coincidencia exacta del nombre del argumento,ya que los argumentos son nombrados exactamente como dicta la documentación
+help(sort)
+sort(decreasing=T,x=c(2,1,1,2,0.3,3,1.3)) #Exacto, pero en orden inverso
 
-help(which)  ## con esto veremos la documentación de la función
-which(matrix(c(T,F,T,T),2,2)) ## aqui se emplea la asignación posicional, cada argumento va en el lugar que le corresponde
+args(which)
+args(matrix)
+which(matrix(c(T,F,T,T),2,2))
+# la funcion which es posicional
+# la funcion matrix es posicional
 
-help(which)   ## con esto veremos la documentación de la función
-which(matrix(c(T,F,T,T),2,2),a=T)  ## aqui se emplea la asignación posicional, cada argumento va en el lugar que le corresponde
+which(matrix(c(T,F,T,T),2,2),a=T)
+# la funcion which es mixta, es posicional para el argumento x
+#     es parcial para el arguento arr.ind
+# la funcion matrix es posicional para todos sus argumentos
