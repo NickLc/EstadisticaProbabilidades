@@ -1,4 +1,4 @@
-##  VICTOR PONCE PINEDO ##
+#  VICTOR PONCE PINEDO #
 
 Jessica=3   ## valor obtenido por Jessica
 Vilma=3     ## Valor obtenido por Vilma
