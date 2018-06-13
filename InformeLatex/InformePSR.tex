@@ -4,6 +4,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{wrapfig, blindtext}
 
 %% Sets page size and margins
 \usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
@@ -192,21 +193,139 @@ El rango de aplicación del modelo de Markov es extenso. Uno de ellos es el apre
 La situación donde el "estimulo" del ambiente depende, en una cierta medida mas no en toda, de las acciones que el agente realiza en el estado anterior puede modelarse mediante un proceso estocástico de Markov debido a que la respuesta del ambiente depende, en cierta medida, de las acciones del agente.
 
 
+\textbf{
+Dentro de todos los temas mencionados anteriormente se escogio el PROBLEMA DE SATISFACCIÓN DE RESTRICCIONES} 
 \subsection{Breve descripción del problema}
+
 \subsection{Resumen de lo realizado en R}
 \subsection{Breve descripci\'on de las prubeas realizadas}
 \subsection{Resumen de la concluci\'on}
 
 
 
-
 \section{Introducci\'on}
+\subsection{Definición de un  Problema de Satisfacción de Restriciones}
+Un promebla de satisfacción de restricciones(o PSR) está definido por:
+\begin{itemize}
+	\item Un conjunto de \textbf{variables}, $\{X_1, X_2,..., X_n\}$
+	\item Un conjunto de \textbf{dominios}, $\{D_1, D_2,..., D_n\}$
+	\item Un conjunto de \textbf{restricciones}, $\{C_1, C_2,..., C_n\}$
+\end{itemize} 
+A cada variable $X_i$ le corresponde un dominio no vacio $D_i$, los dominios son los valores posibles que puede tomar la variable. 
+
+\textbf{Estado}\\ 
+Un estado se define como una asignación de valores a una o todas las variables, $\{X_i = v_i, X_j = v_j...\}$. A un estado que no viole ninguna restricción se le llama estado \textbf{consistente}. Un estado \textbf{completo} es una asignacion en que se menciona cada variable, es decir que se asigne valores a todas las variables.
+
+\textbf{Solución a un PSR}\\
+Es un estado completo y consistente. Es decir, es la asignación de valores a todas las variables de tal forma que satisfagan todas las restricción.
+
+\subsection{Problema de Coloración de Mapas}
+Dentro del Problema de Satisfacción de Restricciones se escogio el problema de coloración de mapas.\\
+El problema de coloración de mapas es un problema que se puede modelar como un PSR.
+\subsubsection*{Definicion}
+El Problema de coloración de mapas es aquel problema donde se tiene un \textbf{conjunto de colores} y un \textbf{mapa plano} dividido en regiones. El objetivo es colorear cada región del mapa de manera que regiones adyacentes\textbf{(frontera)} tengan distintos colores.
+
+\subsection{Teorema de los 4 Colores}
+El teorema menciona que basta solo 4 colores para colorear cualquier \textbf{mapa geográfico plano}, de modo que dos regiones con \textbf{frontera} común tengan diferente color. Además existen condiciones como:
+\begin{itemize}
+\item El mapa debe ser \textbf{conexo} y cada una de las regiones también es conexa.
+\item Se considera frontera, cuando dos regiones se tocan en mas de un punto.
+\end{itemize}
+
+\subsection{Resolución del PSR}
+La resolución de un Problema de Satisfacción de Restricciones consta de dos fases, que son:
+
+\subsubsection{Modelazión del Problema}
+La modelazión de un problema es una parte muy importante para la resolución de problemas, el modelado se realizara en términos de \textbf{variables}, \textbf{dominios} y \textbf{restricciones}.
+
+Gracias al modelamiento del Problema de coloración de mapas como un problema de PSR, se podra demostrar el Teorema de los Colores con ayuda de un ordenador.\\ 
+
+La forma de modelar el problema dentro del PSR es asociando lo siguiente:
+\begin{itemize}
+\item Una \textbf{variable} $X_i$ por cada región del mapa.
+\item El \textbf{dominio} $D_i$ sea el conjunto de colores disponibles.
+\item Una \textbf{restricción} $C_i$ para cada par de regiones contiguas sobre la variable correspondiente que no permita la asignación de identicos valores a las variables.
+\end{itemize}
+
+Para una mejor ilustracion, supongamos que tenemos un mapa con 8 regiones  $\{r_1, r_2,..., r_8\}$, donde cada region $r_i$ es adyacente a la region $r_{i+1}$ donde $i = \{1,..,8\}$, además las regiones deben ser coloreadas con los posibles colores Rojo, Azul, Negro. La modelacion PSR sería:
+\begin{itemize}
+\item Variables: $\{r_1 = v_1, r_2 = v_1,..., r_8 = v_8\}$
+\item Dominio: $\{Rojo, Azul, Negro\}$, un color para cada variable.
+\item Restricciones: $\{r_i \not= r_{i+1}\}$
+\end{itemize}
+
+Para la demostración de el teorema de los cuatro colores se utilizara un \textbf{dominio} que contenga solo cuatro colores.
+
+
+
+
+\subsubsection{Procesar las restricciones}
+Una vez que hemos modelado el problema como un PSR, hay dos formas de procesar las restriccones:
+
+\begin{itemize}
+	 
+\item \textbf{Técnicas de consistencia}: basadas en la eliminación de valores inconsistentes de los dominios de las variables (es decir, que no verifican las restricciones impuestas).
+\item \textbf{Algoritmos de búsqueda}: se basan en la exploración sistemática del espacio de soluciones hasta encontrar una solución (o probar que no existe tal solución en caso contrario) que verifica todas las restricciones del problema.
+\end{itemize}
+
+Para la demostración del teorema de los cuatro colores se opto por utilizar Algoritmos de búsqueda, especificamente El Árbol de Búsqueda y Backtraking Cronológico.
+
+\subsubsection*{El Árbol de Búsqueda}
+
+Las posibles combinaciones de la asignación de valores a las variables en un PSR genera un espacio de búsqueda al que se puede dotar de estructura para ser visto como un \textbf{árbol de búsqueda}. De esta forma, después podremos recorrerlo siguiendo la estrategia que queramos. La búsqueda mediante \textbf{backtracking}, que es la base sobre la que se soportan la mayoría de algoritmos para PSR, corresponde a la tradicional exploración en profundidad DFS en el árbol de búsqueda.
+
+La forma más habitual de darle estructura de árbol pasa por asumir que el orden de las variables es estático y no cambia durante la búsqueda, y entonces un nodo en el nivel k
+del árbol de búsqueda representará un estado donde las variables $\{x_1,...,x_k\}$ están asignadas a valores concretos de sus dominios mientras que el resto de variables, $\{x_{k+1},...,x_n\}$, no lo están. Podemos asignar cada nodo en el árbol de búsqueda con la tupla formada por las asignaciones llevadas a cabo hasta ese momento, donde la raíz del árbol de búsqueda representa la tupla vacía, donde ninguna variable tiene asignado valor alguno.\\
+\begin{wrapfigure}{r}{0.5\linewidth}
+	\centering
+	\includegraphics[width=6.5cm,height=5.5cm]{psr-tree.png}
+	\caption{Árbol de búsqueda}
+	\label{fig:myfig}
+\end{wrapfigure}
+
+
+%
+%	\begin{center}
+%		\raggedleft
+%		
+%		\includegraphics[width=5.5cm,height=4.5cm]{psr-tree.png}		
+%	\end{center}
+%
+
+Los nodos en el primer nivel son 1−tuplas que representan estados donde se les ha asignado un valor a la variable $x_1$. Los nodos en el segundo nivel son 2−tuplas que representan estados donde se le asignan valores a las variables $x_1$ y $x_2$, y así sucesivamente. Un nodo del nivel k es hijo de un nodo del nivel k−1 si la tupla asociada al hijo es una extensión de la de su padre añadiendo una asignación para la variable $x_k$. Si n es el número de variables del problema, los nodos en el nivel n, que representan las hojas del árbol de búsqueda, son n−tuplas, que representan la asignación de valores para todas las variables del problema. De esta manera, si una n−tupla es consistente, entonces es solución del problema.
+
+%En el codigo R se puede a un nodo como el vector color = (0,0,0,.....,0)  representa el el nivel 1 mientras que  los nodos color = (1,0,....,0) , color = (2,0,....,0), color=(3,0,....,0) representan el niver 2, los numeros son los colores que se le asigna a las regiones.%
+
+\subsubsection*{Backtracking Cronológico}
+
+El algoritmo de búsqueda sistemática más conocido para resolver PSR se denomina Algoritmo de Backtracking Cronológico (BT). Si asumimos un orden estático de las variables y de los valores en las variables, este algoritmo funciona de la siguiente manera:
+
+Selecciona la siguiente variable de acuerdo al orden de las variables y le asigna su próximo valor. 
+Esta asignación de la variable se comprueba en todas las restricciones en las que forma parte la variable actual y las anteriores:
+Si todas las restricciones se han satisfecho, vuelve al punto 1.
+Si alguna restricción no se satisface, entonces la asignación actual se deshace y se prueba con el próximo valor de la variable actual. 
+Si no se encuentra ningún valor consistente entonces tenemos una situación sin salida (dead-end) y el algoritmo retrocede a la variable anteriormente asignada y prueba asignándole un nuevo valor.
+Si asumimos que estamos buscando una sola solución, BT finaliza cuando a todas las variables se les ha asignado un valor, en cuyo caso devuelve una solución, o cuando todas las combinaciones de variable-valor se han probado sin éxito, en cuyo caso no existe solución.
+
+Es fácil generalizar BT a restricciones no binarias. Cuando se prueba un valor de la variable actual, el algoritmo comprobará todas las restricciones en las que sólo forman parte la variable actual y las anteriores. Si una restricción involucra a la variable actual y al menos una variable futura, entonces esta restricción no se comprobará hasta que se hayan asignado todas las variables futuras de la restricción.
+
+BT es un algoritmo muy simple pero muy ineficiente. El problema es que tiene una visión local del problema. Sólo comprueba restricciones que están formadas por la variable actual y las pasadas, e ignora la relación entre la variable actual y las futuras. Además, este algoritmo es ingenuo en el sentido de que no recuerda las acciones previas, y como resultado, puede repetir la misma acción varias veces innecesariamente. Para ayudar a combatir este problema, se han desarrollado algunos algoritmos de búsqueda más robustos.
+
+ 
+
+
+
+ 
+
+
+
+
 
 \section{Implementaci\'on}
 
 \section{Prueba}
 
-\section{Concluci\'on}
+\section{Conclusi\'on}
 
 
 \end{document}
