@@ -1,29 +1,27 @@
-# Nombre: Patrichs Inocente Valle 20132212J
+# Autor: Grupo4
 # Respuesta8 : Se muestra la evaluación de argumentos en una función creada y
 # el calculo de inversa de matriz mediante esta función.
 
-invertir<-function(x,noinv=NA,nonmat="no es una matriz!",silent=TRUE) {
-  if(class(x)=='list')
-    if(length(x)!=0){
-      if(class(nonmat)=='character'){}
-      else {   
+invertir <- function(x,noinv=NA,nonmat="no es una matriz!",silent=TRUE) {
+  if(class(x) == 'list')
+    if(length(x) != 0){
+    	if(class(nonmat) != 'character'){   
               as(nonmat,'character')
               print("nonmat debio ser de tipo 'character' por lo que se ha coercionado")
-      }
-        for(i in 1:length(x)){
-           if(class(x[[i]])=='matrix'){
-                             if(class(try(solve(x[[i]]),silent))=='try-error') 
-                             x[[i]]=noinv
-                             else x[[i]]=solve(x[[i]])
-                             }
-           else x[i]=nonmat
-          } 
-          
-      
+      	}
+    	for(i in 1:length(x)){
+        	if(class(x[[i]]) == 'matrix'){
+	            if(class(try(solve(x[[i]]),silent)) == 'try-error') 
+	            	x[[i]] = noinv
+	            else x[[i]] = solve(x[[i]])
+	        }
+           	else x[i] = nonmat
+        }      
     }
-    else print("No hay elementos en la lista x")
+  	else print("No hay elementos en la lista x")
+  
   else print("x no es una lista")
-  x
+  print(x)
 }
 
 # Prueba 1:

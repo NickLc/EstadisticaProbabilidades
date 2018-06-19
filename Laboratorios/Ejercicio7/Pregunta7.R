@@ -1,6 +1,7 @@
-# Respuesta7 : Se muestra el calculo de probabilidades,y el ingreso de datos 
-# mediante la funcion read.table().
 # Autor: Grupo 4
+
+# Pregunta 7 : Se muestra el calculo de probabilidades,y el ingreso de datos 
+# mediante la funcion read.table().
 
  mcd<-function(a,b) {
    if(b)
@@ -8,20 +9,28 @@
    else return(a)
  }
 
-# Solucion item a)
+# Respuesta 7(a)
  
 # Leemos las dos cadenas de entrada,que estan alojadas en el archivo "datos1.txt":
 # Asumiremos que estamos trabajando en alguna distribución de Linux
-system("find -name \"datos1.txt\" > ruta")
-rutz <- scan(file = "ruta", what = character())
-x<-read.table(rutz)
+
+# Utilizamos la funci�n "choose" y seleccionemos el archivo datos1.txt
+rutz <- scan(file.choose(), what = character())
+rutz <- as.data.frame(rutz)
+x <- rutz
+print(x)
+#x<-read.table(rutz)
+
 # Extraemos las dos cadenas y las asignamos como vectores de caracteres en Info y A:
 Info<-noquote(strsplit(as.character(x[1,]),NULL)[[1]])
 A <- noquote(strsplit(as.character(x[2,]),NULL)[[1]])
+
 # Comparamos el numero de "+" en Info y A,hallando el numero de "+" faltantes, en A:
 faltan=sum(Info=="+")-sum(A=="+")
+
 # Numero de elementos dudosos en A:
 dudas=sum(A=="?")
+
 # Si hay elementos dudosos,caculamos la probabilidad como sigue:
 if(dudas>0){
         probabilidad=choose(dudas,faltan)/(2^dudas)  # Casos favorables/Casos totales
@@ -38,12 +47,14 @@ sprintf("%.9f",probabilidad)
 
 
 
-# Solucion item b)
+# Respuesta 7(b)
 
 # Leemos los valores que sacaron Vilma y Esther, que se encuentran en el archivo datos2.txt:
-system("find -name \"datos2.txt\" > ruta2")
-rutx <- scan(file = "ruta2", what = character())
-y<-read.table(rutx)
+# Selecciona el archivo datos2.txt
+rutz <- scan(file.choose(), what = character())
+rutz <- as.numeric(rutz)
+y <- rutz
+print(y)
 # Extraemos el numero maximo de los dos resultados:
 maximo=max(y)
 # Contaremos los casos desfavorables en los que Jessica no gana:
@@ -59,10 +70,6 @@ for(i in 1:6){
 favorables = 216-casos
 #Mostramos la probabilidad de que Jessica gane,expresandolo en una fraccion irreductible:
 sprintf("%i/%i",favorables/mcd(favorables,216),216/mcd(favorables,216))
-
-# Eliminamos rastro de que estuvimos aquí...
-system("rm ruta")
-system("rm ruta2")
 
 #fin del script
 
