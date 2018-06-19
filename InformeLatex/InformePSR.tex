@@ -276,6 +276,8 @@ Las posibles combinaciones de la asignación de valores a las variables en un PS
 
 La forma más habitual de darle estructura de árbol pasa por asumir que el orden de las variables es estático y no cambia durante la búsqueda, y entonces un nodo en el nivel k
 del árbol de búsqueda representará un estado donde las variables $\{x_1,...,x_k\}$ están asignadas a valores concretos de sus dominios mientras que el resto de variables, $\{x_{k+1},...,x_n\}$, no lo están. Podemos asignar cada nodo en el árbol de búsqueda con la tupla formada por las asignaciones llevadas a cabo hasta ese momento, donde la raíz del árbol de búsqueda representa la tupla vacía, donde ninguna variable tiene asignado valor alguno.\\
+%Los nodos del arbol, representan el estado en el codigo R representa el vector color y que los dominios son los colores (1,2,3,4) el color 0 representa que no esta asignado un valor a la variable.%
+ 
 \begin{wrapfigure}{r}{0.5\linewidth}
 	\centering
 	\includegraphics[width=6.5cm,height=5.5cm]{psr-tree.png}
@@ -283,14 +285,6 @@ del árbol de búsqueda representará un estado donde las variables $\{x_1,...,x
 	\label{fig:myfig}
 \end{wrapfigure}
 
-
-%
-%	\begin{center}
-%		\raggedleft
-%		
-%		\includegraphics[width=5.5cm,height=4.5cm]{psr-tree.png}		
-%	\end{center}
-%
 
 Los nodos en el primer nivel son 1−tuplas que representan estados donde se les ha asignado un valor a la variable $x_1$. Los nodos en el segundo nivel son 2−tuplas que representan estados donde se le asignan valores a las variables $x_1$ y $x_2$, y así sucesivamente. Un nodo del nivel k es hijo de un nodo del nivel k−1 si la tupla asociada al hijo es una extensión de la de su padre añadiendo una asignación para la variable $x_k$. Si n es el número de variables del problema, los nodos en el nivel n, que representan las hojas del árbol de búsqueda, son n−tuplas, que representan la asignación de valores para todas las variables del problema. De esta manera, si una n−tupla es consistente, entonces es solución del problema.
 
