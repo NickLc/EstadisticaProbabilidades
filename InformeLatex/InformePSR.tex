@@ -15,6 +15,11 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
+%Paquete para utilizar algoritmos
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{algorithmic}
+\pagestyle{myheadings}
+
 %Caratula
 \begin{document}
 \begin{titlepage}
@@ -194,12 +199,12 @@ La situación donde el "estimulo" del ambiente depende, en una cierta medida mas
 
 
 \textbf{
-Dentro de todos los temas mencionados anteriormente se escogio el PROBLEMA DE SATISFACCIÓN DE RESTRICCIONES} 
-\subsection{Breve descripción del problema}
-
-\subsection{Resumen de lo realizado en R}
-\subsection{Breve descripci\'on de las prubeas realizadas}
-\subsection{Resumen de la concluci\'on}
+Dentro de todos los temas mencionados anteriormente se escogio el PROBLEMA DE SATISFACCIÓN DE RESTRICCIONES}
+% 
+%\subsection{Breve descripción del problema}
+%\subsection{Resumen de lo realizado en R}
+%\subsection{Breve descripci\'on de las prubeas realizadas}
+%\subsection{Resumen de la concluci\'on}
 
 
 
@@ -307,19 +312,50 @@ BT es un algoritmo muy simple pero muy ineficiente. El problema es que tiene una
 
  
 
+\section{Estado del arte}
 
 
- 
+\pagebreak
+\section{Diseño del experimento}
+
+Para solucionar el coloreo de mapas implementamos el algoritmo del backtraking cronologico:
+
+%usando algoritmos
+\begin{algorithm}
+	%Etiqueta algoritmo 	
+	\caption{Algoritmo de Backtracking Cronológico\label{ALG1_3}}
+	\KwIn{Vector de colores V}
+	\KwOut{Vector de colores V que satisface PSR}
+	Procedimiento $Backtracking(k, V [n])$ \# Llamada inicial: $Backtracking(1, V [n])$ \\
+	\hspace{0.1cm} \textbf{Inicio}\\
+	\hspace{0.1cm} V [$k$] = $Seleccion(d_k)$\hspace{1cm}\# Selecciona un valor de $d_k$ para asignar a $x_k$ \\
+	\hspace{0.1cm} \textbf{si} $Comprobar(k, V [n])$ \textbf{entonces}\\
+	\hspace{0.6cm} \textbf{si} $k = n$ \textbf{entonces}\\
+	\hspace{1.1cm} \textbf{devolver} $V [n]$\hspace{1cm}\# Es una solución\\
+	\hspace{0.6cm} \textbf{sino}\\
+	\hspace{1.1cm} $Backtraking(k + 1, V [n])$\\
+	\hspace{0.6cm} \textbf{fin si}\\
+	\hspace{0.1cm} \textbf{sino}\\
+	\hspace{0.6cm} \textbf{si} $quedan valores(dk)$ \textbf{entonces}\\
+	\hspace{1.1cm} $Backtraking(k, V [n])$\\
+	\hspace{0.6cm} \textbf{sino}\\
+	\hspace{1.1cm} \textbf{si} $k = 1$ \textbf{entonces}\\
+	\hspace{1.6cm} \textbf{devolver} $\oslash$\hspace{1cm}\# Fallo\\
+	\hspace{1.1cm} \textbf{sino}\\
+	\hspace{1.6cm} $Backtraking(k - 1, V [n])$\\
+	\hspace{1.1cm} \textbf{fin si}\\
+	\hspace{0.6cm} \textbf{fin si}\\
+	\hspace{0.1cm} \textbf{fin si}\\
+	\hspace{0.1cm}\textbf{fin} $Backtraking$
+\end{algorithm}
 
 
 
+\section{Experimentos y resultados}
 
-
-\section{Implementaci\'on}
-
-\section{Prueba}
+\section{Discusi\'on}
 
 \section{Conclusi\'on}
 
-
+\section{Bibliograf\'ia}
 \end{document}

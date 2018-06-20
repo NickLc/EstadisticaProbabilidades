@@ -6,17 +6,16 @@
 \contentsline {subsubsection}{\numberline {1.1.3}Problema de Satisfacci\'on de Restricciones}{3}{subsubsection.1.1.3}
 \contentsline {subsubsection}{\numberline {1.1.4}Machine Learning}{4}{subsubsection.1.1.4}
 \contentsline {subsubsection}{\numberline {1.1.5}Proceso de Markov}{4}{subsubsection.1.1.5}
-\contentsline {subsection}{\numberline {1.2}Breve descripci\IeC {\'o}n del problema}{5}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Resumen de lo realizado en R}{5}{subsection.1.3}
-\contentsline {subsection}{\numberline {1.4}Breve descripci\'on de las prubeas realizadas}{5}{subsection.1.4}
-\contentsline {subsection}{\numberline {1.5}Resumen de la concluci\'on}{5}{subsection.1.5}
 \contentsline {section}{\numberline {2}Introducci\'on}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}Definici\IeC {\'o}n de un Problema de Satisfacci\IeC {\'o}n de Restriciones}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Problema de Coloraci\IeC {\'o}n de Mapas}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Teorema de los 4 Colores}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.3}Teorema de los 4 Colores}{5}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Resoluci\IeC {\'o}n del PSR}{6}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Modelazi\IeC {\'o}n del Problema}{6}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Procesar las restricciones}{6}{subsubsection.2.4.2}
-\contentsline {section}{\numberline {3}Implementaci\'on}{8}{section.3}
-\contentsline {section}{\numberline {4}Prueba}{8}{section.4}
-\contentsline {section}{\numberline {5}Conclusi\'on}{8}{section.5}
+\contentsline {section}{\numberline {3}Estado del arte}{7}{section.3}
+\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del experimento}{8}{section.4}
+\contentsline {section}{\numberline {5}Experimentos y resultados}{8}{section.5}
+\contentsline {section}{\numberline {6}Discusi\'on}{8}{section.6}
+\contentsline {section}{\numberline {7}Conclusi\'on}{8}{section.7}
+\contentsline {section}{\numberline {8}Bibliograf\'ia}{8}{section.8}
