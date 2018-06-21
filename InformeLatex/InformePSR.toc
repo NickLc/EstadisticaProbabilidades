@@ -1,21 +1,22 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Resumen}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}Inteligencia Artificial}{2}{subsection.1.1}
-\contentsline {subsubsection}{\numberline {1.1.1}Conceptos Generales}{2}{subsubsection.1.1.1}
-\contentsline {subsubsection}{\numberline {1.1.2}B\'usqueda entre Adversarios}{3}{subsubsection.1.1.2}
-\contentsline {subsubsection}{\numberline {1.1.3}Problema de Satisfacci\'on de Restricciones}{3}{subsubsection.1.1.3}
-\contentsline {subsubsection}{\numberline {1.1.4}Machine Learning}{4}{subsubsection.1.1.4}
-\contentsline {subsubsection}{\numberline {1.1.5}Proceso de Markov}{4}{subsubsection.1.1.5}
-\contentsline {section}{\numberline {2}Introducci\'on}{5}{section.2}
-\contentsline {subsection}{\numberline {2.1}Definici\IeC {\'o}n de un Problema de Satisfacci\IeC {\'o}n de Restriciones}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Problema de Coloraci\IeC {\'o}n de Mapas}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Teorema de los 4 Colores}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Resoluci\IeC {\'o}n del PSR}{6}{subsection.2.4}
-\contentsline {subsubsection}{\numberline {2.4.1}Modelazi\IeC {\'o}n del Problema}{6}{subsubsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.2}Procesar las restricciones}{6}{subsubsection.2.4.2}
-\contentsline {section}{\numberline {3}Estado del arte}{7}{section.3}
-\contentsline {section}{\numberline {4}Dise\IeC {\~n}o del experimento}{8}{section.4}
-\contentsline {section}{\numberline {5}Experimentos y resultados}{8}{section.5}
-\contentsline {section}{\numberline {6}Discusi\'on}{8}{section.6}
-\contentsline {section}{\numberline {7}Conclusi\'on}{8}{section.7}
-\contentsline {section}{\numberline {8}Bibliograf\'ia}{8}{section.8}
+\contentsline {section}{\numberline {1}Objetivo}{2}{section.1}
+\contentsline {section}{\numberline {2}Introducci\'on}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Inteligencia Artificial}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}Conceptos Generales}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {2.1.2}B\'usqueda entre Adversarios}{4}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Problema de Satisfacci\'on de Restricciones}{4}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}Machine Learning}{5}{subsubsection.2.1.4}
+\contentsline {subsubsection}{\numberline {2.1.5}Proceso de Markov}{5}{subsubsection.2.1.5}
+\contentsline {section}{\numberline {3}Cuerpo}{7}{section.3}
+\contentsline {subsection}{\numberline {3.1}Definici\IeC {\'o}n de un Problema de Satisfacci\IeC {\'o}n de Restriciones}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Problema de Coloraci\IeC {\'o}n de Mapas}{7}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Teorema de los 4 Colores}{7}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Resoluci\IeC {\'o}n del PSR}{7}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Modelazi\IeC {\'o}n del Problema}{7}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Procesar las restricciones}{8}{subsubsection.3.4.2}
+\contentsline {section}{\numberline {4}Estado del arte}{9}{section.4}
+\contentsline {section}{\numberline {5}Dise\IeC {\~n}o del experimento}{10}{section.5}
+\contentsline {section}{\numberline {6}Experimentos y resultados}{11}{section.6}
+\contentsline {section}{\numberline {7}Discusi\'on}{13}{section.7}
+\contentsline {section}{\numberline {8}Conclusi\'on}{13}{section.8}
+\contentsline {section}{\numberline {9}Bibliograf\'ia}{13}{section.9}

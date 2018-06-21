@@ -1,20 +1,21 @@
-\BOOKMARK [1][-]{section.1}{Resumen}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Inteligencia Artificial}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Conceptos Generales}{subsection.1.1}% 3
-\BOOKMARK [3][-]{subsubsection.1.1.2}{B\372squeda entre Adversarios}{subsection.1.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.1.3}{Problema de Satisfacci\363n de Restricciones}{subsection.1.1}% 5
-\BOOKMARK [3][-]{subsubsection.1.1.4}{Machine Learning}{subsection.1.1}% 6
-\BOOKMARK [3][-]{subsubsection.1.1.5}{Proceso de Markov}{subsection.1.1}% 7
-\BOOKMARK [1][-]{section.2}{Introducci\363n}{}% 8
-\BOOKMARK [2][-]{subsection.2.1}{Definici\363n de un Problema de Satisfacci\363n de Restriciones}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.2}{Problema de Coloraci\363n de Mapas}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.3}{Teorema de los 4 Colores}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.4}{Resoluci\363n del PSR}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Modelazi\363n del Problema}{subsection.2.4}% 13
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Procesar las restricciones}{subsection.2.4}% 14
-\BOOKMARK [1][-]{section.3}{Estado del arte}{}% 15
-\BOOKMARK [1][-]{section.4}{Dise\361o del experimento}{}% 16
-\BOOKMARK [1][-]{section.5}{Experimentos y resultados}{}% 17
-\BOOKMARK [1][-]{section.6}{Discusi\363n}{}% 18
-\BOOKMARK [1][-]{section.7}{Conclusi\363n}{}% 19
-\BOOKMARK [1][-]{section.8}{Bibliograf\355a}{}% 20
+\BOOKMARK [1][-]{section.1}{Objetivo}{}% 1
+\BOOKMARK [1][-]{section.2}{Introducci\363n}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Inteligencia Artificial}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Conceptos Generales}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{B\372squeda entre Adversarios}{subsection.2.1}% 5
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Problema de Satisfacci\363n de Restricciones}{subsection.2.1}% 6
+\BOOKMARK [3][-]{subsubsection.2.1.4}{Machine Learning}{subsection.2.1}% 7
+\BOOKMARK [3][-]{subsubsection.2.1.5}{Proceso de Markov}{subsection.2.1}% 8
+\BOOKMARK [1][-]{section.3}{Cuerpo}{}% 9
+\BOOKMARK [2][-]{subsection.3.1}{Definici\363n de un Problema de Satisfacci\363n de Restriciones}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.2}{Problema de Coloraci\363n de Mapas}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Teorema de los 4 Colores}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Resoluci\363n del PSR}{section.3}% 13
+\BOOKMARK [3][-]{subsubsection.3.4.1}{Modelazi\363n del Problema}{subsection.3.4}% 14
+\BOOKMARK [3][-]{subsubsection.3.4.2}{Procesar las restricciones}{subsection.3.4}% 15
+\BOOKMARK [1][-]{section.4}{Estado del arte}{}% 16
+\BOOKMARK [1][-]{section.5}{Dise\361o del experimento}{}% 17
+\BOOKMARK [1][-]{section.6}{Experimentos y resultados}{}% 18
+\BOOKMARK [1][-]{section.7}{Discusi\363n}{}% 19
+\BOOKMARK [1][-]{section.8}{Conclusi\363n}{}% 20
+\BOOKMARK [1][-]{section.9}{Bibliograf\355a}{}% 21
