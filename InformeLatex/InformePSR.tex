@@ -77,7 +77,24 @@ Lima - Peru\\
 \pagebreak
 \tableofcontents
 \pagebreak
-\section{Objetivo}
+\section{Objetivos}
+\subsection{Objetivos Generales}
+\begin{itemize}
+
+\item Solucionar el problema de coloración de mapas computacionalmente utilizando el \textbf{lenguaje R}.
+\item Verificar que se cumple el teorema de los cuatro colores.
+\item Breve introducción a la inteligencia artificial.
+\end{itemize}
+
+\subsection{Objetivos Especificos}
+\begin{itemize}
+\item Recopilar mapas habiles con terminacion \textbf{shapefile} "SHP".
+\item Optener la matriz de adyacencia del mapa.
+\item Implementar el algoritmo de coloracion que satiface el PSR.
+\item Mostrar el mapa coloreado.
+\end{itemize}
+
+
 
 \pagebreak
 \section{Introducci\'on}
@@ -320,7 +337,7 @@ BT es un algoritmo muy simple pero muy ineficiente. El problema es que tiene una
 \pagebreak
 \section{Diseño del experimento}
 Describimos los objetos, funciones y tecnicas para solucionar el coloreo de mapas.
-\subsection*{Objetos:}
+\subsection{Objetos}
 \textbf{Mapa:} Contiene un archivo mapa en formato SHP.\\ 
 \textbf{MatrixAdyacencia:} Contiene la matriz de adyacencia del mapa, considerando el mapa como un grafo.\\
 \textbf{Color:} Es el vector que servirá para colorear las regiones del mapa, tienen una dimensión = n° de regiones.\\ 
@@ -335,14 +352,15 @@ El objeto Color solo puede tomar los siguientes colores:
 \item 4 = Azul
 \end{itemize}
 
-\subsection*{Funciones:}
+\subsection{Funciones}
 \textbf{Correcto}: La función tiene como parámetros el objeto color y un entero. Aquí se comprueba si las variables cumplen con las restricciones, es decir si las regiones son adyacentes no deben tener el mismo color. 
 
 En el contexto del PSR el color representa las Variables, los colores el Dominio y la función Correcto las restricciones.
 
-\subsection*{Técnicas:}
+\subsection{Técnicas}
 La técnica que se utiliza es la aplicación del \textbf{Algoritmo BackTraking}, ya que es uno de los algoritmos que más se ajusta para la resolución de problemas con Satisfacción de Restricciones.
 Para optimizar la búsqueda de la solución se le agregara \textbf{Heuristicas}.
+\bigskip
 
 %usando algoritmos
 \begin{algorithm}
@@ -373,6 +391,7 @@ Para optimizar la búsqueda de la solución se le agregara \textbf{Heuristicas}.
 	\hspace{0.1cm}\textbf{fin} $Backtraking$
 \end{algorithm}
 
+\textbf{La implementación del diseño del experimento se encuentra en el archivo Coloracion.R}
 
 \pagebreak
 \section{Experimentos y resultados}
@@ -386,7 +405,7 @@ Los resultados obtenidos se encuentra en la \textbf{Figure 2} y \textbf{Figure 3
 %figura1_1
 \begin{figure}
 	\centering
-	\includegraphics[width=10.5cm,height=8.5cm]{Peru.png}
+	\includegraphics[width=12.5cm,height=10.5cm]{Peru.png}
 	\caption{Coloración del mapa de Perú}
 	\label{FI1_1}
 \end{figure}
@@ -394,24 +413,60 @@ Los resultados obtenidos se encuentra en la \textbf{Figure 2} y \textbf{Figure 3
 %figura1_2
 \begin{figure}
 	\centering
-	\includegraphics[width=10.5cm,height=8.5cm]{Colombia.png}
+	\includegraphics[width=12.5cm,height=10.5cm]{Colombia.png}
 	\caption{Coloración del mapa de Colombia}
 	\label{FI2_1}
 \end{figure}
 
-
-%\begin{wrapfigure}{r}{0.5\linewidth}
-%	\centering
-%	\includegraphics[width=6.5cm,height=5.5cm]{Colombia.png}
-%	\caption{Coloración del mapa de Colombia}
-%	\label{fig:myfig}
-%\end{wrapfigure}
- 
 \pagebreak
 \section{Discusi\'on}
+\subsection{Interpretaci\'on de los resultados optenidos}
+
+\subsection{¿C\'omo se podria mejorar los resultados?}
+
+Para mejorar los resultados se puede implementar:
+\subsubsection{Algoritmos de Optimización}
+\begin{itemize}
+\item \textbf{Algoritmos Look-Back}\\
+Los algoritmos look-back tratan de explotar la información del problema para comportarse más eficientemente en las situaciones sin salida. Al igual que el backtracking cronológico, los algoritmos look-back llevan a cabo la comprobación de la consistencia hacia atrás, es decir, entre la variable actual y las pasadas.\\
+Un algoritmo de este tipo es el \textbf{Backjumping (BJ)} este es parecido a BT excepto que se comporta de una manera más inteligente cuando encuentra situaciones sin salida.
+
+\item \textbf{Algoritmos look-ahead}\\
+Los algoritmos look-back tratan de reforzar el comportamiento de BT mediante un comportamiento más inteligente cuando se encuentran en situaciones sin salida. Sin embargo, todos ellos llevan a cabo la comprobación de la consistencia solamente hacia atrás, ignorando las futuras variables. Los algoritmos Look-ahead hacen una comprobación hacia adelante en cada etapa de la búsqueda, es decir, llevan a cabo las comprobaciones para obtener las inconsistencias de las variables futuras involucradas además de las variables actual y pasadas. De esa manera, las situaciones sin salida se pueden identificar antes y los valores inconsistentes se pueden descubrir y podar para las variables futuras.\\
+Uno de los algoritmos look-ahead más comunes es el \textbf{Forward checking (FC)} 
+
+\end{itemize}
+
+\subsubsection{Heurísticas}
+Los algoritmos de búsqueda para PSR vistos hasta el momento requieren el orden en el cual se van a estudiar las variables, así como el orden en el que se van a instanciar los valores de cada una de las variables. Seleccionar el orden correcto de las variables y de los valores puede mejorar notablemente la eficiencia de resolución. De igual forma, puede resultar importante una ordenación adecuada de las restricciones del problema.
+
+Veamos algunas de las más importantes heurísticas de ordenación de variables y de ordenación de valores.\\
+
+\subsubsection*{Ordenación de Variables}
+
+Muchos resultados experimentales han mostrado que el orden en el cual las variables son asignadas durante la búsqueda puede tener una impacto significativo en el tamaño del espacio de búsqueda explorado. Generalmente, las heurísticas de ordenación de variables tratan de seleccionar lo antes posible las variables que más restringen a las demás. La intuición indica que es mejor tratar de asignar lo antes posible las variables más restringidas y de esa manera identificar las situaciones sin salida lo antes posible y así reducir el número de vueltas atrás.
+
+Las heurísticas de ordenación de variables estáticas generan un orden fijo de las variables antes de iniciar la búsqueda, basado en información global derivada del grafo de restricciones inicial.
+
+\subsubsection*{Heurísticas de ordenación de variables estáticas}
+Se han propuesto varias heurísticas de ordenación de variables estáticas. Estas heurísticas se basan en la información global que se deriva de la topología del grafo de restricciones original que representa el PSR:
+
+\begin{itemize}	
+	
+\item \textbf{Minimum Width (MW)}\\
+La anchura de la variable x es el número de variables que están antes de x, de acuerdo a un orden dado, y que son adyacentes a x. La anchura de un orden es la máxima anchura de todas las variables bajo ese orden. La anchura de un grafo de restricciones es la anchura mínima de todos los posibles ordenes. Después de calcular la anchura de un grafo de restricciones, las variables se ordenan desde la última hasta la primera en anchura decreciente. Esto significa que las variables que están al principio de la ordenación son las más restringidas y las variables que están al final de la ordenación son las menos restringidas. Asignando las variables más restringidas al principio, las situaciones sin salida se pueden identificar antes y además se reduce el número de vueltas atrás.
+
+\item \textbf{Maximun Degree (MD)}\\
+Ordena las variables en un orden decreciente de su grado en el grafo de restricciones. El grado de un nodo se define como el número de nodos que son adyacentes a él. Esta heurística también tiene como objetivo encontrar un orden de anchura mínima, aunque no lo garantiza.
+
+\item \textbf{Maximun Cardinality (MC)}\\
+Selecciona la primera variable arbitrariamente y después en cada paso, selecciona la variable que es adyacente al conjunto más grande de las variables ya seleccionadas.
+
+\end{itemize}
+
 
 \section{Conclusi\'on}
-
+Se puede concluir que un mapa puede ser coloreado con solo 4 colores donde cada region adyacente tiene colores distintos.
 \section{Bibliograf\'ia}
 
 Para el desarrollo del informe se utilizaron\\
