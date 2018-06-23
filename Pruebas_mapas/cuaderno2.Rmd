@@ -1,0 +1,96 @@
+---
+title: "Coloración de mapas"
+author: "Grupo 5"
+date: "24 de junio de 2018"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Mapas
+
+Para empezar procedemos a activar dos librerías necesarias para poder realizar
+el gráfico de nuestros mapas
+
+```{r}
+library(rgdal)
+library(rgeos)
+```
+
+## Seleccionando mapa:
+Ahora seleccionaremos el archivo SHP que nos permitirá graficar el mapa:
+
+
+```{r}
+mapa=readOGR(file.choose())
+plot(mapa)
+```
+
+# Matriz de adyacencia:
+ Procedemos a modelar nuestros mapas mediante grafos utilizando matrices de
+ adyacencia, además del vector de colores de las regiones del mapa:
+ 
+ 
+```{r}
+adyacencia=gIntersects(mapa,byid=TRUE)
+
+adyacencia[which(adyacencia==TRUE)]=1
+color <- rep(0,length(adyacencia[1,]))
+adyacencia
+```
+
+# Función verificadora:
+ Definiremos una función que verificará que se cumpla con la restricción del problema:
+ 
+```{r}
+correcto <- function(color, k) {
+  if (k==1) return (TRUE)
+  for(j in 1:(k-1)) {
+    if(adyacencia[j,k]==1){  # comprueba que son adyacentes
+      if(color[k]==color[j]) # comprueba que tienen el mismo color
+        return(FALSE)
+      }
+    }
+  return(TRUE)
+  }
+```
+
+# Coloreo del mapa:
+  Procedemos a colorear el mapa cumpliendo con la restricción dada y modelaremos mediante código en R el teorema de los cuatro colores:
+  
+```{r}
+k=1
+while(k >= 1){
+color[k]=color[k]+1
+while(!correcto(color,k)){ # mientras la asignacion de color sea inadecuada.
+  color[k]=color[k]+1
+  if(color[k]>4) break
+    }
+  if (color[k] > 4) {
+    k <- k-1
+    }
+  else {
+    if (k == length(adyacencia[1,])) {
+      break
+    }
+    else {
+      k <- k + 1
+      color[k] <- 0
+      }
+    }
+}
+color
+```
+
+# Visualizacion
+Procedemos a visualizar nuestros resultados:
+
+```{r}
+
+plot(mapa,col=color)
+
+```
