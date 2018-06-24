@@ -1,6 +1,6 @@
 ---
 title: "Coloraci?n de mapas"
-author: "Grupo 5"
+author: "Grupo 4"
 date: "24 de junio de 2018"
 output:
   html_document:
