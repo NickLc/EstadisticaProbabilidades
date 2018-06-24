@@ -10,31 +10,43 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# Cuaderno del Código Fuente
 
-## Mapas
+### Instalación
+Para empezar debemos instalar y/o actualizar los siguientes paquetes.
 
-Para empezar procedemos a activar dos librerías necesarias para poder realizar
-el gráfico de nuestros mapas.
+```{r}
+install.packages('rgdal')
+install.packages('rgeos')
+```
+
+### Activación
+
+ Luego activamos las librerías necesarias para poder realizar
+ el gráfico de nuestro mapa.
 
 ```{r}
 library(rgdal)
 library(rgeos)
 ```
 
-## Seleccionando mapa:
-Ahora seleccionaremos el archivo .shp que nos permitirá graficar el mapa:
-
+### Selección del mapa:
+Gracias a la función file.choose() seleccionaremos el archivo .shp que nos permitirá graficar el mapa.
 
 ```{r}
 mapa=readOGR(file.choose())
 plot(mapa)
 ```
 
-# Matriz de adyacencia:
- Procedemos a modelar nuestros mapas mediante grafos utilizando las matrices de
- adyacencia, además del vector de colores de las regiones del mapa:
- 
- 
+# Modelamiento del Problema:
+
+Procedemos a modelar nuestros problema creando los objetos, funciones y tecnicas.
+
+## Creación de los Objetos
+
+*adyacencia: Es la matriz adyacencia del grafo que genera el mapa. 
+*color:  Es un vector el cual solo puede tomar 4 valores (1,2,3,4).
+
 ```{r}
 adyacencia=gIntersects(mapa,byid=TRUE)
 
@@ -43,8 +55,10 @@ color <- rep(0,length(adyacencia[1,]))
 adyacencia
 ```
 
-# Función verificadora:
- Definiremos una función que verificará que se cumpla con la restricción del problema:
+## Creación de las funciones
+
+### Función correcto:
+Definiremos una función que verificará que se cumpla con las restricciónes del problema.
  
 ```{r}
 correcto <- function(color, k) {
@@ -58,10 +72,11 @@ correcto <- function(color, k) {
   return(TRUE)
   }
 ```
+## Técnicas
 
-# Coloreo del mapa:
-  Procedemos a colorear el mapa cumpliendo con la restricción dada y modelaremos, usando el lenguaje R, nuestro problema de coloración en cuestión:
-  
+La tecnica empleada es el BackTraking o Vuelta Atras, se usa esta porque en Problemas de Satisfacción de Restricciones
+nos proporciona una mejor garantia en comparacion de otras.
+
 ```{r}
 k=1
 while(k >= 1){
@@ -94,6 +109,9 @@ Procedemos a visualizar nuestros resultados:
 plot(mapa,col=color)
 
 ```
+
+## Pruebas
+Aquí se puede visualizar algunos resultados 
 
 ## Resultado al colorear el mapa de Brasil
 ![](https://github.com/PatrichsInocenteCM274/Discreta/blob/master/mapas/resultado_brasil.png)
