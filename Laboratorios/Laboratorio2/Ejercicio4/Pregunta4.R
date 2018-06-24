@@ -8,8 +8,7 @@ loopvec2 <- 9:6
 mat1 <- matrix(NA,length(loopvec1),length(loopvec2))
 mat1
 
-## contador para recorrer las filas
-c = 1
+
 
 # Respuesta 4(a): Reescribimos el bucle for.
 
