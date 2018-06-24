@@ -1,8 +1,18 @@
 # Coloración de Mapas en R
 
-#### Proyecto de Introducción a la Inteligencia Artificial
+#### Proyecto de Introducción a la inteligencia artificial.
 
-### Para la réplica de los resultados del proyecto, se requiere de forma indispensable:
+## Integrantes:
+
+#### - Rios León, Marco
+#### - Lázaro Camasca, Nick
+#### - Ponce Pinedo, Victor
+#### - Inocente Valle, Patrichs
+
+
+## Réplica de Resultados:
+
+#### Para la réplica de los resultados del proyecto, se requiere de forma indispensable:
 
  - Windows en cualquiera de las versiones:  9x/ME/NT4.0/2000/XP/2003/Vista/7/8/2012 Server/8.1 .
 
