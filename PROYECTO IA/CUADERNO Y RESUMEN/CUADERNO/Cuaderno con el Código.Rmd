@@ -1,5 +1,5 @@
 ---
-title: "Coloraci?n de mapas"
+title: "Coloración de mapas"
 author: "Grupo 4"
 date: "24 de junio de 2018"
 output:
@@ -13,8 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Mapas
 
-Para empezar procedemos a activar dos librer?as necesarias para poder realizar
-el gr?fico de nuestros mapas
+Para empezar procedemos a activar dos librerías necesarias para poder realizar
+el gráfico de nuestros mapas.
 
 ```{r}
 library(rgdal)
@@ -22,7 +22,7 @@ library(rgeos)
 ```
 
 ## Seleccionando mapa:
-Ahora seleccionaremos el archivo SHP que nos permitir? graficar el mapa:
+Ahora seleccionaremos el archivo .shp que nos permitirá graficar el mapa:
 
 
 ```{r}
@@ -31,8 +31,8 @@ plot(mapa)
 ```
 
 # Matriz de adyacencia:
- Procedemos a modelar nuestros mapas mediante grafos utilizando matrices de
- adyacencia, adem?s del vector de colores de las regiones del mapa:
+ Procedemos a modelar nuestros mapas mediante grafos utilizando las matrices de
+ adyacencia, además del vector de colores de las regiones del mapa:
  
  
 ```{r}
@@ -43,8 +43,8 @@ color <- rep(0,length(adyacencia[1,]))
 adyacencia
 ```
 
-# Funci?n verificadora:
- Definiremos una funci?n que verificar? que se cumpla con la restricci?n del problema:
+# Función verificadora:
+ Definiremos una función que verificará que se cumpla con la restricción del problema:
  
 ```{r}
 correcto <- function(color, k) {
@@ -60,7 +60,7 @@ correcto <- function(color, k) {
 ```
 
 # Coloreo del mapa:
-  Procedemos a colorear el mapa cumpliendo con la restricci?n dada y modelaremos mediante c?digo en R el teorema de los cuatro colores:
+  Procedemos a colorear el mapa cumpliendo con la restricción dada y modelaremos, usando el lenguaje R, nuestro problema de coloración en cuestión:
   
 ```{r}
 k=1
@@ -86,7 +86,7 @@ while(!correcto(color,k)){ # mientras la asignacion de color sea inadecuada.
 color
 ```
 
-# Visualizacion
+# Visualización
 Procedemos a visualizar nuestros resultados:
 
 ```{r}
