@@ -1,6 +1,8 @@
 ## instalamos y activamos dos packages necesarios para graficar nuestros mapas
 install.packages('rgdal')
 install.packages('rgeos')
+
+##Activamos las librerias
 library(rgdal)
 library(rgeos)
 
