@@ -217,17 +217,32 @@ El rango de aplicación del modelo de Markov es extenso. Uno de ellos es el apre
 La situación donde el "estimulo" del ambiente depende, en una cierta medida mas no en toda, de las acciones que el agente realiza en el estado anterior puede modelarse mediante un proceso estocástico de Markov debido a que la respuesta del ambiente depende, en cierta medida, de las acciones del agente.\\\\
 
 \textbf{
-Dentro de todos los temas mencionados anteriormente se escogio el PROBLEMA DE SATISFACCIÓN DE RESTRICCIONES}
-% 
-%\subsection{Breve descripción del problema}
-%\subsection{Resumen de lo realizado en R}
-%\subsection{Breve descripci\'on de las prubeas realizadas}
-%\subsection{Resumen de la concluci\'on}
+Dentro de todos los temas mencionados anteriormente se escogio el PROBLEMA DE SATISFACCIÓN DE RESTRICCIONES para resolver el Problema de Coloraci\'on de Mapas}
 
+\pagebreak
+
+\section{Estado del arte}
+
+Si bien el problema de la coloración de mapas específicamente la conjetura de los 4 colores lleva siendo un problema de con mucha historia.\\
+En \textbf{1852} Francis Guthrie platea el problema a su hermano Frederick y éste a Augustus de Morgan.\\
+En \textbf{1976} Ken Appel y Wolfgang Haken prueban con ayuda de un ordenador que sus 1.483 configuraciones son reducibles (50 días de cálculo).\\
+En \textbf{1996} cuando N. Robertson, D.P. Sanders, P. Seymour y R. Thomas mejoran la demostración con ayuda de ordenador (sólo 633 configuraciones) y automatizan la prueba de la inevitabilidad.\\
+
+Aquí mencionares algunos artículos científicos que se ha realizado a lo largo de esta historia para resolver este problema. 
+
+\subsection{Artículos Científicos}
+\subsubsection{Backtrack an O(1) expected time Algorithm for the Graph Coloring Problem by Herbert Wilf}
+Este artículo muestra que el tiempo de ejecución para un algoritmo de coloración de grafos que utiliza backtracking nos devuelve una solución en un tiempo O(1).
+\subsubsection{On the Analysis of Backtrack Procedures for the Colouring of Random Graphs by Remi Monasson} 
+Este artículo estudia la efectividad de algoritmos que emplean backtracking para resolver problemas NP-completos, centrándose más en el problema de coloración de grafos.
+\subsubsection{A Formal Proof of the Four Color Theorem by Limin Xiang}
+Este artículo brinda una prueba formal del teorema de los cuatro colores mediande el principio de inducción matemática.
 
 
 \pagebreak
+
 \section{Cuerpo}
+
 \subsection{Definición de un  Problema de Satisfacción de Restriciones}
 Un promebla de satisfacción de restricciones(o PSR) está definido por:
 \begin{itemize}
@@ -281,8 +296,6 @@ Para una mejor ilustracion, supongamos que tenemos un mapa con 8 regiones  $\{r_
 Para la demostración de el teorema de los cuatro colores se utilizara un \textbf{dominio} que contenga solo cuatro colores.
 
 
-
-
 \subsubsection{Procesar las restricciones}
 Una vez que hemos modelado el problema como un PSR, hay dos formas de procesar las restriccones:
 
@@ -330,11 +343,8 @@ Es fácil generalizar BT a restricciones no binarias. Cuando se prueba un valor 
 BT es un algoritmo muy simple pero muy ineficiente. El problema es que tiene una visión local del problema. Sólo comprueba restricciones que están formadas por la variable actual y las pasadas, e ignora la relación entre la variable actual y las futuras. Además, este algoritmo es ingenuo en el sentido de que no recuerda las acciones previas, y como resultado, puede repetir la misma acción varias veces innecesariamente. Para ayudar a combatir este problema, se han desarrollado algunos algoritmos de búsqueda más robustos.
 
  
-
-\section{Estado del arte}
-
-
 \pagebreak
+
 \section{Diseño del experimento}
 Describimos los objetos, funciones y tecnicas para solucionar el coloreo de mapas.
 \subsection{Objetos}
