@@ -349,9 +349,9 @@ BT es un algoritmo muy simple pero muy ineficiente. El problema es que tiene una
 Describimos los objetos, funciones y tecnicas para solucionar el coloreo de mapas.
 \subsection{Objetos}
 \textbf{Mapa:} Contiene un archivo mapa en formato SHP.\\ 
-\textbf{MatrixAdyacencia:} Contiene la matriz de adyacencia del mapa, considerando el mapa como un grafo.\\
+\textbf{MatrixAdyacencia:} Contiene la matriz de adyacencia del mapa del grafo generado por el mapa.\\
 \textbf{Color:} Es el vector que servirá para colorear las regiones del mapa, tienen una dimensión = n° de regiones.\\ 
-El objeto Color solo puede tomar los siguientes colores:
+El objeto Color solo puede tomar los siguientes valores:
 
 \begin{itemize}
 	
@@ -363,47 +363,107 @@ El objeto Color solo puede tomar los siguientes colores:
 \end{itemize}
 
 \subsection{Funciones}
-\textbf{Correcto}: La función tiene como parámetros el objeto color y un entero. Aquí se comprueba si las variables cumplen con las restricciones, es decir si las regiones son adyacentes no deben tener el mismo color. 
+\textbf{Correcto}: La función Correcto tiene como parámetros el objeto color y un entero. Aquí se comprueba si las variables cumplen con las restricciones, es decir si las regiones son adyacentes no deben tener el mismo color. Esta función se encuentra en \textbf{Algorithm 1}.
 
 En el contexto del PSR el color representa las Variables, los colores el Dominio y la función Correcto las restricciones.
 
 \subsection{Técnicas}
-La técnica que se utiliza es la aplicación del \textbf{Algoritmo BackTraking}, ya que es uno de los algoritmos que más se ajusta para la resolución de problemas con Satisfacción de Restricciones.
-Para optimizar la búsqueda de la solución se le agregara \textbf{Heuristicas}.
-\bigskip
+La técnica que se utiliza es la aplicación del \textbf{Algoritmo BackTraking}, ya que es uno de los algoritmos que más se ajusta para la resolución de problemas con Satisfacción de Restricciones. Esta tecnica se encuentra en \textbf{Algorithm 2}.
+ 
+Para optimizar la búsqueda de la solución se le agregara \textbf{Heuristicas}.\\
+\textbf{\\La implementación del diseño del experimento se encuentra en el archivo Codigo Fuente Oficial.R}
 
+\subsection{Pseudocódigo del Diseño}
+
+La implementación del diseño en pseudocódigo que puede apreciar en \textbf{Algorithm 1} y \textbf{Algorithm 2}.
 %usando algoritmos
-\begin{algorithm}
-	%Etiqueta algoritmo 	
-	\caption{Algoritmo de Backtracking Cronológico\label{ALG1_3}}
-	\KwIn{Vector de colores V}
-	\KwOut{Vector de colores V que satisface PSR}
-	Procedimiento $Backtracking(k, V [n])$ \# Llamada inicial: $Backtracking(1, V [n])$ \\
+%\begin{algorithm}
+%	%Etiqueta algoritmo 	
+%	\caption{Algoritmo de Backtracking Cronológico\label{ALG1_3}}
+%	\KwIn{Vector de colores V}
+%	\KwOut{Vector de colores V que satisface PSR}
+%	Procedimiento $Backtracking(k, V [n])$ \# Llamada inicial: $Backtracking(1, V [n])$ %	\\
+%	\hspace{0.1cm} \textbf{Inicio}\\
+%	\hspace{0.1cm} V [$k$] = $Seleccion(d_k)$\hspace{1cm}\# Selecciona un valor de %	%	d_k$ para asignar a $x_k$ \\
+%	\hspace{0.1cm} \textbf{si} $Comprobar(k, V [n])$ \textbf{entonces}\\
+%	\hspace{0.6cm} \textbf{si} $k = n$ \textbf{entonces}\\
+%	\hspace{1.1cm} \textbf{devolver} $V [n]$\hspace{1cm}\# Es una solución\\
+%	\hspace{0.6cm} \textbf{sino}\\
+%	\hspace{1.1cm} $Backtraking(k + 1, V [n])$\\
+%	\hspace{0.6cm} \textbf{fin si}\\
+%	\hspace{0.1cm} \textbf{sino}\\
+%	\hspace{0.6cm} \textbf{si} $quedan valores(dk)$ \textbf{entonces}\\
+%	\hspace{1.1cm} $Backtraking(k, V [n])$\\
+%	\hspace{0.6cm} \textbf{sino}\\
+%	\hspace{1.1cm} \textbf{si} $k = 1$ \textbf{entonces}\\
+%	\hspace{1.6cm} \textbf{devolver} $\oslash$\hspace{1cm}\# Fallo\\
+%	\hspace{1.1cm} \textbf{sino}\\
+%	\hspace{1.6cm} $Backtraking(k - 1, V [n])$\\
+%	\hspace{1.1cm} \textbf{fin si}\\
+%	\hspace{0.6cm} \textbf{fin si}\\
+%	\hspace{0.1cm} \textbf{fin si}\\
+%	\hspace{0.1cm}\textbf{fin} $Backtraking$
+%\end{algorithm}
+
+
+\begin{algorithm}	
+	%Etiqueta algoritmo     
+	\caption{Coloración de Mapas\label{ALG1_3}}
+	\KwIn{Vector de colores color}
+	\KwOut{Vector de colores color que satisface PSR}
+	\hspace{0.1cm} \textbf{Funci\'on correcto} $(color, k):Booleana$\\
 	\hspace{0.1cm} \textbf{Inicio}\\
-	\hspace{0.1cm} V [$k$] = $Seleccion(d_k)$\hspace{1cm}\# Selecciona un valor de $d_k$ para asignar a $x_k$ \\
-	\hspace{0.1cm} \textbf{si} $Comprobar(k, V [n])$ \textbf{entonces}\\
-	\hspace{0.6cm} \textbf{si} $k = n$ \textbf{entonces}\\
-	\hspace{1.1cm} \textbf{devolver} $V [n]$\hspace{1cm}\# Es una solución\\
-	\hspace{0.6cm} \textbf{sino}\\
-	\hspace{1.1cm} $Backtraking(k + 1, V [n])$\\
-	\hspace{0.6cm} \textbf{fin si}\\
-	\hspace{0.1cm} \textbf{sino}\\
-	\hspace{0.6cm} \textbf{si} $quedan valores(dk)$ \textbf{entonces}\\
-	\hspace{1.1cm} $Backtraking(k, V [n])$\\
-	\hspace{0.6cm} \textbf{sino}\\
-	\hspace{1.1cm} \textbf{si} $k = 1$ \textbf{entonces}\\
-	\hspace{1.6cm} \textbf{devolver} $\oslash$\hspace{1cm}\# Fallo\\
-	\hspace{1.1cm} \textbf{sino}\\
-	\hspace{1.6cm} $Backtraking(k - 1, V [n])$\\
+	\hspace{0.1cm} \textbf{si} $k=1$ \textbf{entonces}\\
+	\hspace{1.1cm} \textbf{devolver} $TRUE$\hspace{1cm}\\
+	\hspace{0.1cm} \textbf{fin si}\\
+	\hspace{0.1cm} \textbf{para} $j=1$ \textbf{hasta} $j=k-1$ \textbf{hacer}\\
+	\hspace{0.6cm} \textbf{si} $adyacencia[j,k]=1$ \textbf{entonces}\\
+	\hspace{1.1cm} \textbf{si} $color[k]=color[j]$ \textbf{entonces}\\
+	\hspace{1.6cm} \textbf{devolver} $FALSE$\hspace{1cm}\\
 	\hspace{1.1cm} \textbf{fin si}\\
 	\hspace{0.6cm} \textbf{fin si}\\
-	\hspace{0.1cm} \textbf{fin si}\\
-	\hspace{0.1cm}\textbf{fin} $Backtraking$
+	\hspace{0.1cm} \textbf{fin para}\\
+	\hspace{0.1cm} \textbf{devolver} $TRUE$\hspace{1cm}\\
+	\hspace{0.1cm} \textbf{Fin-Función}\\	
 \end{algorithm}
 
-\textbf{La implementación del diseño del experimento se encuentra en el archivo Coloracion.R}
+
+\begin{algorithm}
+	\caption{Coloración de Mapas\label{ALG1_3}}
+	\hspace{0.1cm} $Procedimiento$\\
+	\hspace{0.1cm} \textbf{Inicio}\\
+	\hspace{0.1cm} $color$ <- $rep(0,length(adyacencia[1,]))$\\
+	\hspace{0.1cm} $mapa$ <-$readOGR(file.choose())$\\
+	\hspace{0.1cm} $adyacencia$<-$gIntersects(mapa,byid=TRUE)$\\
+	\hspace{0.1cm} $adyacencia[which(adyacencia==TRUE)]$<-$1$\\
+	\hspace{0.1cm} $k<-1$\\
+	\hspace{0.1cm} \textbf{mientras} $k>=1$ \textbf{hacer}\\
+	\hspace{0.6cm} $color[k]<-color[k]+1$\\
+	\hspace{0.6cm} \textbf{mientras} $correcto(color,k)=FALSE$ \textbf{hacer}\\
+	\hspace{1.1cm} $color[k]$ \textbf{<-} $color[k]+1$\\
+	\hspace{1.1cm} \textbf{si} $color[k]>4$ \textbf{entonces}\\
+	\hspace{1.6cm} \textbf{Romper mientras}\\
+	\hspace{1.1cm} \textbf{fin si}\\
+	\hspace{0.6cm} \textbf{fin mientras}\\
+	\hspace{0.6cm} \textbf{si} $color[k]>4$ \textbf{entonces}\\
+	\hspace{1.1cm} $k$ \textbf{<-} $k-1$\\
+	\hspace{0.6cm} \textbf{fin si}\\
+	\hspace{0.6cm} \textbf{sino}\\
+	\hspace{1.1cm} \textbf{si} $k = length(adyacencia[1,])$ \textbf{entonces}\\
+	\hspace{1.6cm} \textbf{Romper mientras}\\
+	\hspace{1.1cm} \textbf{fin si}\\
+	\hspace{1.1cm} \textbf{sino}\\
+	\hspace{1.6cm} $k$ \textbf{<-} $k+1$\\
+	\hspace{1.6cm} $color[k]$ \textbf{<-} $0$\\
+	\hspace{1.1cm} \textbf{fin sino}\\
+	\hspace{0.6cm} \textbf{fin sino}\\
+	\hspace{0.1cm} \textbf{fin mientras}\\
+	\hspace{0.1cm} \textbf{fin} $Procedimiento$\\	
+\end{algorithm}
+
 
 \pagebreak
+
 \section{Experimentos y resultados}
 
 Para los experimentos se utilizo dos mapas uno de Perú y Colombia de los archivos PaisPeru.shp y PaisColombia.shp
@@ -411,11 +471,11 @@ Para los experimentos se utilizo dos mapas uno de Perú y Colombia de los archiv
 Los resultados obtenidos se encuentra en la \textbf{Figure 2} y \textbf{Figure 3}, se puede apreciar que la coloración de mapas cumple con las restricciones, además se utilizo un minimo de 4 colores.
 
 
-
+%\pagebreak
 %figura1_1
 \begin{figure}
 	\centering
-	\includegraphics[width=12.5cm,height=10.5cm]{Peru.png}
+	\includegraphics[width=14.5cm,height=12.5cm]{Peru.png}
 	\caption{Coloración del mapa de Perú}
 	\label{FI1_1}
 \end{figure}
@@ -423,7 +483,7 @@ Los resultados obtenidos se encuentra en la \textbf{Figure 2} y \textbf{Figure 3
 %figura1_2
 \begin{figure}
 	\centering
-	\includegraphics[width=12.5cm,height=10.5cm]{Colombia.png}
+	\includegraphics[width=14.5cm,height=12.5cm]{Colombia.png}
 	\caption{Coloración del mapa de Colombia}
 	\label{FI2_1}
 \end{figure}
@@ -431,6 +491,9 @@ Los resultados obtenidos se encuentra en la \textbf{Figure 2} y \textbf{Figure 3
 \pagebreak
 \section{Discusi\'on}
 \subsection{Interpretaci\'on de los resultados optenidos}
+
+Vemos que el vector "color", el cual representa nuestra paleta de colores tiene como menor número al 1 y como mayor número al 4. Esto significa que se consiguió colorear el mapa con 4 colores como máximo, de modo que se cumple el teorema de los cuatro colores. Ahora, al visualizar el mapa podemos notar que las regiones adyacentes poseen distintos colores, con lo que se cumple la restricción de nuestro PSR. Cabe recalcar que si dos regiones solo tienen en común un único punto estas no serán consideradas adyacentes.
+
 
 \subsection{¿C\'omo se podria mejorar los resultados?}
 
@@ -484,15 +547,28 @@ Selecciona la primera variable arbitrariamente y después en cada paso, seleccio
 \end{itemize}
 
 \section{Bibliograf\'ia}
+\begin{itemize}	
+\item Para la obtencion de mapas en formato con terminaci\'on \textbf{shapefile} "SHP" se utilizo:
+
+\textbf{Paginas:}
 \begin{itemize}
-\item Para la obtencion de mapas en formato con terminaci\'on \textbf{shapefile} "SHP" se utilizo,\\
-\textbf{Paginas:}\\
-http://www.datapages.com/gis-map-publishing-program/gis-open-files/global-framework/global-heat-flow-database/shapefiles-list
-\item Para el desarrollo del informe se utilizaron,\\
-\textbf{Paginas:}\\
-https://www.javatpoint.com/artificial-intelligence-in-robotics\\ 
-\textbf{Libros:}\\
-INTELIGENCIA ARTIFICAL UN ENFOQUE MODERNO, Russell, S.L, Segunda edición.
+\item https://tapiquen-sig.jimdo.com/descargas-gratuitas/
+\end{itemize}
+
+\item Para el desarrollo del informe se utilizaron:
+
+\textbf{Paginas:}
+\begin{itemize}
+\item https://www.javatpoint.com/artificial-intelligence-in-robotics.
+\end{itemize}
+
+\textbf{Libros:}
+\begin{itemize}
+\item INTELIGENCIA ARTIFICAL UN ENFOQUE MODERNO, Russell, S.L, Segunda edición.
+\item Matemática Discreta y sus aplicaciones, Kenneth Rosen, 5ta edicion.
+\item Hands‑On Machine Learning with Scikit‑Learn and TensorFlow: Concepts, Aurélien Géron, 1st Edition.
+\item El arte de programar en R. Un lenguaje para la estadística, Julio Sergio Santana, \item Efraín Mateos Farfán, primera edición,2014.
+\end{itemize}
 \end{itemize}
 
 \end{document}

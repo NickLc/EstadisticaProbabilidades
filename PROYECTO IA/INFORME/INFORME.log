@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  24 JUN 2018 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.27)  24 JUN 2018 19:05
 entering extended mode
 **./INFORME.tex
 (INFORME.tex
@@ -774,7 +774,11 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \c@ALC@depth=\count166
 \ALC@tlm=\skip69
 \algorithmicindent=\skip70
-) (INFORME.aux)
+) (INFORME.aux
+
+LaTeX Warning: Label `ALG1_3' multiply defined.
+
+)
 \openout1 = `INFORME.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -791,8 +795,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
-
-("C:\Users\ADMIN\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
+ ("C:\Users\ADMIN\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ucs\ucsencs.def"
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 *geometry* driver: auto-detecting
@@ -880,7 +883,7 @@ LaTeX Info: Redefining \nameref on input line 24.
 \@outlinefile=\write4
 \openout4 = `INFORME.out'.
 
-<UNI.png, id=142, 1204.5pt x 1514.65875pt>
+<UNI.png, id=146, 1204.5pt x 1514.65875pt>
 File: UNI.png Graphic file (type png)
 <use UNI.png>
 Package pdftex.def Info: UNI.png  used on input line 36.
@@ -938,7 +941,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--317
 
  []
 
-<psr-tree.png, id=247, 401.5pt x 247.92625pt>
+<psr-tree.png, id=252, 401.5pt x 247.92625pt>
 File: psr-tree.png Graphic file (type png)
 <use psr-tree.png>
 Package pdftex.def Info: psr-tree.png  used on input line 320.
@@ -950,43 +953,46 @@ Underfull \hbox (badness 1163) in paragraph at lines 332--333
 \T1/cmr/m/n/10 El al-go-ritmo de búsqueda sis-temática más
  []
 
-[9 <./psr-tree.png>] [10] [11]
-<Peru.png, id=265, 315.42844pt x 395.22656pt>
+[9 <./psr-tree.png>] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+
+ []
+
+[11] [12]
+<Peru.png, id=322, 315.42844pt x 395.22656pt>
 File: Peru.png Graphic file (type png)
 <use Peru.png>
-Package pdftex.def Info: Peru.png  used on input line 418.
-(pdftex.def)             Requested size: 355.67914pt x 298.75908pt.
-<Colombia.png, id=266, 331.99031pt x 426.84468pt>
+Package pdftex.def Info: Peru.png  used on input line 478.
+(pdftex.def)             Requested size: 412.58858pt x 355.66443pt.
+<Colombia.png, id=323, 331.99031pt x 426.84468pt>
 File: Colombia.png Graphic file (type png)
 <use Colombia.png>
-Package pdftex.def Info: Colombia.png  used on input line 426.
-(pdftex.def)             Requested size: 355.67696pt x 298.7697pt.
- [12] [13 <./Peru.png> <./Colombia.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Package pdftex.def Info: Colombia.png  used on input line 486.
+(pdftex.def)             Requested size: 412.58568pt x 355.68132pt.
+ [13 <./Peru.png>] [14 <./Colombia.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
 
-[14]
-Overfull \hbox (20.99432pt too wide) in paragraph at lines 488--491
-\T1/cmr/m/n/10 http://www.datapages.com/gis-map-publishing-program/gis-open-fil
-es/global-framework/global-
- []
-
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 498.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 498.
+[15] [16]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 574.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 574.
  (INFORME.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 498.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 498.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 574.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 574.
 Package rerunfilecheck Info: File `INFORME.out' has not changed.
-(rerunfilecheck)             Checksum: 2F9001A530DC7A97E5FECBA65DBB918F;2659.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 498.
+(rerunfilecheck)             Checksum: 3A726029A9FE899561ABDAA10C1295A6;2739.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 574.
  ) 
 Here is how much of TeX's memory you used:
- 20143 strings out of 493305
- 364542 string characters out of 3129802
- 450661 words of memory out of 3000000
- 23243 multiletter control sequences out of 15000+200000
+ 20170 strings out of 493305
+ 364876 string characters out of 3129802
+ 455716 words of memory out of 3000000
+ 23244 multiletter control sequences out of 15000+200000
  10316 words of font info for 24 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,56p,883b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1004,9 +1010,9 @@ sfonts/cm/cmr10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/cm/cmr7.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ADMIN/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on INFORME.pdf (16 pages, 624021 bytes).
+Output written on INFORME.pdf (17 pages, 634099 bytes).
 PDF statistics:
- 679 PDF objects out of 1000 (max. 8388607)
- 98 named destinations out of 1000 (max. 500000)
- 305 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 718 PDF objects out of 1000 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
+ 313 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,10 +1,13 @@
-# Proyecto Final CM274 "Problema de Coloración de Mapas"
 
-### Proyecto de Introducción a la inteligencia artificial.
+# Proyecto Final CM274 
 
-# Integrantes:
+## Introducción a la inteligencia artificial.
 
-### - Rios León, Marco
-### - Lázaro Camasca, Nick
+### Problema de Coloración de Mapas modelado como PSR
+
+## Integrantes (Grupo 4):
+
+### - Rios León, Marco Naro
+### - Lázaro Camasca, Edson Nick
 ### - Ponce Pinedo, Victor
 ### - Inocente Valle, Patrichs

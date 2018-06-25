@@ -25,11 +25,12 @@
 \contentsline {subsection}{\numberline {5.1}Objetos}{11}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Funciones}{11}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}T\IeC {\'e}cnicas}{11}{subsection.5.3}
-\contentsline {section}{\numberline {6}Experimentos y resultados}{12}{section.6}
-\contentsline {section}{\numberline {7}Discusi\'on}{14}{section.7}
-\contentsline {subsection}{\numberline {7.1}Interpretaci\'on de los resultados optenidos}{14}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}\IeC {\textquestiondown }C\'omo se podria mejorar los resultados?}{14}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Algoritmos de Optimizaci\IeC {\'o}n}{14}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Heur\IeC {\'\i }sticas}{14}{subsubsection.7.2.2}
-\contentsline {section}{\numberline {8}Conclusi\'on}{15}{section.8}
-\contentsline {section}{\numberline {9}Bibliograf\'ia}{15}{section.9}
+\contentsline {subsection}{\numberline {5.4}Pseudoc\IeC {\'o}digo del Dise\IeC {\~n}o}{11}{subsection.5.4}
+\contentsline {section}{\numberline {6}Experimentos y resultados}{13}{section.6}
+\contentsline {section}{\numberline {7}Discusi\'on}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}Interpretaci\'on de los resultados optenidos}{15}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}\IeC {\textquestiondown }C\'omo se podria mejorar los resultados?}{15}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Algoritmos de Optimizaci\IeC {\'o}n}{15}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Heur\IeC {\'\i }sticas}{15}{subsubsection.7.2.2}
+\contentsline {section}{\numberline {8}Conclusi\'on}{16}{section.8}
+\contentsline {section}{\numberline {9}Bibliograf\'ia}{16}{section.9}
