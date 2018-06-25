@@ -1,1 +1,23 @@
-## Aqui se pondra un resumen de Todo el Proyecto
+# Resumen del Proyecto
+
+
+
+#### El proyecto se enfocó en la resolución del problema de coloración de mapas, el cual consiste en colorear todas las regiones de un mapa de manera que, regiones adyacentes no tengan el mismo color y que la cantidad de colores sea minima (debido al teorema de los 4 colores, se puede afirmar que esta cantidad es menor o igual a 4), para los fines de su resolución se fijo como meta usar herramientas bases de la inteligencia artificial,lo cual conllevo a que modelemos este problema como un problema de satisfacción de restricciones.
+
+
+
+
+
+#### Durante el desarrolo del proyecto nos enfrentamos a problemas tales como la obtención de un mapa en un formato accequible para ser trabajado en el lenguaje R,la obtención de la matriz de adyacencia del mapa introducido,el algoritmo para hacer la coloración apropiada cumpliendo las restricciones y el coloreado del mismo.
+
+
+
+
+
+#### De la literatura descrita en la bibliografia,se consiguió las herramientas necesarias para continuar el proyecto, por lo que se llegó al acuerdo de usar un  algoritmo con enfoque backtraking implementado por nuestro equipo, sin dejar de mencionar que fuimos instruidos por la literatura citada. Nuestro algoritmo recibe los datos de un archivo Shapefile (mapa sin color) y devuelve un vector de enteros, cuyo tamaño es la cantidad de regiones del mapa y cuyo contenido representa la coloración de cada región del mismo, finalmente imprimimos con esta información el mapa ya coloreado.
+
+
+
+
+
+#### En el proyecto pudimos conseguir el desarrollo de los objetivos de manera óptima, logrando superar los obstaculos que se nos presentaron, como es el caso de encontrar archivos shapefile de los mapas, el uso de la funcion gintersects() para la obtención de la matriz de adyacencia e investigar acerca de los parametros de la funcion plot(), lo cual nos permitio mostrar nuestro mapa ya coloreado.
