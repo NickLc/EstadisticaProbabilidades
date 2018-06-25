@@ -23,9 +23,9 @@ environment(jpeg)
 
 #Respuesta 1.c: El codigo muestra el uso de la funcion "which"
 # para comprobar que un paquete esta dentro de otro
-x=ls("package:graphics")
+x=ls("package:graphics",all.names=TRUE)
 x
-# Nos muestra indice el indice del paquete "smoothScatter"
-# dentro del paquete "graphics
+# Si smoothScatter pertenece al package graphics, se imprimira en pantalla
 x[which(x=="smoothScatter")]
+# Devolvemos el índice de smoothScatter
 which(x=="smoothScatter")
